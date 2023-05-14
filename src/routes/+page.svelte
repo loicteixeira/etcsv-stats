@@ -1,0 +1,18 @@
+<script lang="ts">
+	import OrderItemDropzone from '$lib/components/OrderItemDropzone.svelte';
+	import OrderDropzone from '$lib/components/OrderDropzone.svelte';
+	import OrderItemTable from '$lib/components/OrderItemTable.svelte';
+</script>
+
+<div class="container h-full mx-auto p-6">
+	<div class="mb-12 flex gap-8">
+		<OrderItemDropzone />
+		<OrderDropzone />
+	</div>
+
+	<div class="mb-12">
+		<!-- aaa -->
+	</div>
+
+	<OrderItemTable />
+</div>
