@@ -2,6 +2,7 @@
 	import OrderItemDropzone from '$lib/components/OrderItemDropzone.svelte';
 	import OrderDropzone from '$lib/components/OrderDropzone.svelte';
 	import OrderItemTable from '$lib/components/OrderItemTable.svelte';
+	import OrderAccordion from '$lib/components/OrderAccordion.svelte';
 </script>
 
 <div class="container h-full mx-auto p-6">
@@ -14,5 +15,6 @@
 		<!-- aaa -->
 	</div>
 
-	<OrderItemTable />
+	<!-- <OrderItemTable /> -->
+	<OrderAccordion />
 </div>

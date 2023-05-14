@@ -21,24 +21,24 @@ async function readFileContent(file: File): Promise<string | ArrayBuffer> {
 }
 
 function parseCSV(fileContent: string | ArrayBuffer, recordSchema: ZodType) {
-	const validRecords: z.infer<typeof recordSchema>[] = []; // TODO: Can we use generic to type the return type as well?
+	const records: z.infer<typeof recordSchema>[] = []; // TODO: Can we use generic to type the return type as well?
 	const errors: TParseError[] = [];
 
 	const rows = parse(fileContent, { columns: true, skip_empty_lines: true }); // TODO: Use async?
 	rows.forEach((row: any, idx: number) => {
 		const result = recordSchema.safeParse(row);
 		if (result.success) {
-			validRecords.push(result.data);
+			records.push(result.data);
 		} else {
 			errors.push({ line: idx + 1, error: result.error.issues });
 		}
 	});
 
-	return { errors, validRecords };
+	return { errors, records };
 }
 
 export async function readCSV(fileHandle: File, recordSchema: ZodType) {
 	const fileContent = await readFileContent(fileHandle); // TODO: Handle error
-	const { errors, validRecords } = parseCSV(fileContent, recordSchema);
-	return { errors, validRecords };
+	const { errors, records } = parseCSV(fileContent, recordSchema);
+	return { errors, records };
 }

@@ -1,9 +1,9 @@
 import type { ZodIssue } from 'zod';
 
 export type TParseError = { line: number; error: ZodIssue[] };
-export type TFileInfo = {
+export type TFileInfo<T> = {
 	fileHandle: File;
 	filename: string;
-	lineCount: number | undefined;
+	records: T[];
 	errors: TParseError[];
 };

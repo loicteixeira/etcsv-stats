@@ -9,24 +9,22 @@
 
 	export let name: string;
 	export let title: string = 'Dropzone';
-	export let files: Writable<TFileInfo[]>;
-	export let records: Writable<any[]>;
+	export let files: Writable<TFileInfo<any>[]>;
 	export let recordSchema: ZodType;
 
 	async function onChangeHandler(e: Event) {
 		const target = e.target as HTMLInputElement;
 		if (!target || !target.files) return;
 
-		Array.from(target.files).map(async (fileHandle) => {
-			const { errors, validRecords } = await readCSV(fileHandle, recordSchema);
+		Array.from(target.files).forEach(async (fileHandle) => {
+			const { errors, records } = await readCSV(fileHandle, recordSchema);
 			const fileInfo = {
 				fileHandle: fileHandle,
 				filename: fileHandle.name, // TODO: Bail or update if duplicated name?
-				lineCount: validRecords.length + errors.length,
-				errors: errors
+				records: records,
+				errors: errors,
 			};
 			$files = [...$files, fileInfo].sort((a, b) => a.filename.localeCompare(b.filename));
-			$records = [...$records, ...validRecords];
 		});
 	}
 </script>
@@ -51,12 +49,12 @@
 
 	{#if $files}
 		<ul class="list my-3">
-			{#each $files as { filename, lineCount, errors } (filename)}
+			{#each $files as { filename, records, errors } (filename)}
 				<li>
 					<Icon icon={fileDescription} />
 					<span>{filename}</span>
-					{#if lineCount}
-						<span class="badge variant-filled-success">{lineCount} lines(s)</span>
+					{#if records}
+						<span class="badge variant-filled-success">{records.length} lines(s)</span>
 					{/if}
 					{#if errors.length}
 						<span class="badge variant-filled-warning">{errors.length} error(s)</span>
