@@ -3,12 +3,7 @@ import { z } from 'zod';
 export const statementCsvLineSchema = z
 	.object({
 		Info: z.string(),
-		Net: z.preprocess((input) => {
-			return z
-				.string()
-				.transform((v) => v.replace(/[^-.,0-9]/g, ''))
-				.parse(input);
-		}, z.coerce.number().default(0)),
+		Net: z.string(),
 		Title: z.string(),
 		Type: z.string(),
 	})

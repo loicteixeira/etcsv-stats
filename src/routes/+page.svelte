@@ -13,10 +13,6 @@
 		<StatementDropzone />
 	</div>
 
-	<div class="mb-12">
-		<!-- aaa -->
-	</div>
-
 	<!-- <OrderItemTable /> -->
 	<OrderAccordion />
 </div>

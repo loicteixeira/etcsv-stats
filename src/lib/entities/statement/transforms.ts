@@ -6,6 +6,7 @@ export function postProcessStatementCsvLine({
 	type,
 	title,
 }: TStatementCsvLine): TStatement {
+	// Try to find the order ID
 	const orderIdTextCandidate =
 		(info.toLowerCase().includes('order') && info) ||
 		(title.toLowerCase().includes('order') && title) ||
@@ -13,12 +14,24 @@ export function postProcessStatementCsvLine({
 	const orderIdMatch = orderIdTextCandidate.match(/[0-9]+/)?.[0];
 	const orderId = orderIdMatch ? parseInt(orderIdMatch) : null;
 
+	// Cleanup info and title
+	const orderTextPattern = /order(?: #|: )\d+/i;
+	const cleanedInfo = info.replace(orderTextPattern, '').trim();
+	const cleanedTitle = title.replace(orderTextPattern, '').trim();
+
+	// Parse amount
+	let cleanedAmount = parseFloat(amount.replace(/[^-.,0-9]/g, '')) || 0;
+
+	// Make the buyer's sales tax positive,
+	// because it contributes to the order total (before fees)
+	cleanedAmount = type.toLocaleLowerCase() === 'tax' ? Math.abs(cleanedAmount) : cleanedAmount;
+
 	return {
-		amount,
-		info,
+		amount: cleanedAmount,
+		info: cleanedInfo,
 		orderId,
 		type: type.toLocaleLowerCase(),
-		title,
+		title: cleanedTitle,
 	};
 }
 
