@@ -1,12 +1,12 @@
 <script lang="ts">
 	import CSVFileDropzone from './CSVFileDropzone.svelte';
 	import { orderItemCSVs } from '$lib/stores';
-	import { orderItemCsvLine } from '$lib/entities/orderItem/model';
+	import { orderItemCsvLineSchema } from '$lib/entities/orderItem/model';
 </script>
 
 <CSVFileDropzone
-	name="order-items"
+	name="order-item-csvs"
 	title="Order Items CSVs"
 	files={orderItemCSVs}
-	recordSchema={orderItemCsvLine}
+	recordSchema={orderItemCsvLineSchema}
 />

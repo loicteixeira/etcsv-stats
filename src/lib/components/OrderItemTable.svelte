@@ -3,9 +3,9 @@
 	import type { TableSource } from '@skeletonlabs/skeleton';
 	import { currencyFormatter } from '$lib/formatters';
 	import { orderItems } from '$lib/stores';
-	import { getRecordsBySku } from '$lib/entities/orderItem/transforms';
+	import { aggregateOrderItemsBySku } from '$lib/entities/orderItem/transforms';
 
-	$: orderItemsBySku = getRecordsBySku($orderItems);
+	$: orderItemsBySku = aggregateOrderItemsBySku($orderItems);
 
 	$: orderItemsRows = Object.keys(orderItemsBySku)
 		.map((key) => ({ sku: key, ...orderItemsBySku[key] }))
@@ -15,7 +15,7 @@
 
 	$: orderItemsTableSource = {
 		head: ['Item Name', 'Total Quantity', 'Total Price'],
-		body: tableMapperValues(orderItemsRows, ['itemName', 'totalQuantity', 'totalPrice'])
+		body: tableMapperValues(orderItemsRows, ['itemName', 'totalQuantity', 'totalPrice']),
 	} satisfies TableSource;
 </script>
 

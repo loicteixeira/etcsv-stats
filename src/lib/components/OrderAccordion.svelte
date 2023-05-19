@@ -11,10 +11,8 @@
 		{#each $orders as order, index (order.id)}
 			<AccordionItem open={index < 4}>
 				<svelte:fragment slot="summary">
-					<p>
-						<span class="font-bold">Order #{order.id}</span> for {currencyFormatter(
-							order.totalAmount,
-						)}<span class="font-bold" />
+					<p class="font-bold">
+						Order #{order.id}
 					</p>
 				</svelte:fragment>
 				<svelte:fragment slot="content">
@@ -79,19 +77,41 @@
 									>
 								</tr>
 							{/if}
-							<tr>
-								<td colspan="3">
-									<span class="badge variant-filled-warning">TODO</span> Etsy fees + Sales tax
-								</td>
-								<td class="text-right">...</td>
-							</tr>
+							{#each order.statements as statement (statement)}
+								<tr>
+									<td>
+										[{statement.type}] {statement.title} – {statement.info}
+									</td>
+									<td colspan="3" class="text-right">{currencyFormatter(statement.amount)}</td>
+								</tr>
+							{:else}
+								<tr>
+									<td colspan="4" class="flex items-center gap-2">
+										<Icon icon={alertCircle} class="text-warning-500" />
+										<p>
+											Missing statements information. Did you upload a statement CSV for the same
+											period as this order?
+										</p>
+									</td>
+								</tr>
+							{/each}
 						</tbody>
 						<tfoot>
 							<tr>
-								<th colspan="3">
-									<span class="badge variant-filled-warning">TODO</span> Total
+								<th colspan="3" class="text-right"> Order Total </th>
+								<td class="text-right">{currencyFormatter(order.totalAmount)}</td>
+							</tr>
+							<tr>
+								<th colspan="3" class="text-right">
+									Net (by Etsy)<br />
+									Net (computed)<br />
+									Net (diff)
 								</th>
-								<td class="text-right">...</td>
+								<td class="text-right">
+									{currencyFormatter(order.netAmount)}<br />
+									{currencyFormatter(order.computedNetAmount)}<br />
+									{currencyFormatter(order.netAmount - order.computedNetAmount)}
+								</td>
 							</tr>
 						</tfoot>
 					</table>
