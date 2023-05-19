@@ -1,14 +1,11 @@
-import type { TOrderItemCsvLine } from './model';
+import type { TOrderItemCsvLine, TOrderItem, TOrderItemTotal } from './model';
 
-type TOrderItemTotal = {
-	itemName: string;
-	totalPrice: number;
-	totalQuantity: number;
-};
-type TOrderItemBySku = Record<string, TOrderItemTotal>;
+export function postProcessOrderItemCsvLine(orderItem: TOrderItemCsvLine): TOrderItem {
+	return orderItem;
+}
 
-export function aggregateOrderItemsBySku(orderItems: TOrderItemCsvLine[]) {
-	return orderItems.reduce<TOrderItemBySku>((accumulator, currentValue) => {
+export function aggregateOrderItemsBySku(orderItems: TOrderItem[]) {
+	return orderItems.reduce<Record<string, TOrderItemTotal>>((accumulator, currentValue) => {
 		accumulator[currentValue.sku] ||= {
 			itemName: currentValue.itemName,
 			totalPrice: 0.0,
@@ -20,8 +17,8 @@ export function aggregateOrderItemsBySku(orderItems: TOrderItemCsvLine[]) {
 	}, {});
 }
 
-export function getOrderItemsByOrderId(orderItems: TOrderItemCsvLine[]) {
-	return orderItems.reduce<Record<number, TOrderItemCsvLine[]>>((accumulator, currentValue) => {
+export function getOrderItemsByOrderId(orderItems: TOrderItem[]) {
+	return orderItems.reduce<Record<number, TOrderItem[]>>((accumulator, currentValue) => {
 		accumulator[currentValue.orderId] ||= [];
 		accumulator[currentValue.orderId].push(currentValue);
 		return accumulator;

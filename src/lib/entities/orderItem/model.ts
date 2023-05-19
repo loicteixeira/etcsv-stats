@@ -31,3 +31,11 @@ export const orderItemCsvLineSchema = z
 	}));
 
 export type TOrderItemCsvLine = z.infer<typeof orderItemCsvLineSchema>;
+
+export type TOrderItem = TOrderItemCsvLine;
+
+export type TOrderItemTotal = {
+	itemName: string;
+	totalPrice: number;
+	totalQuantity: number;
+};

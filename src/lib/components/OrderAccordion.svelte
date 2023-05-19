@@ -108,9 +108,9 @@
 									Net (diff)
 								</th>
 								<td class="text-right">
-									{currencyFormatter(order.netAmount)}<br />
+									{currencyFormatter(order.etsyNetAmount)}<br />
 									{currencyFormatter(order.computedNetAmount)}<br />
-									{currencyFormatter(order.netAmount - order.computedNetAmount)}
+									{currencyFormatter(order.etsyNetAmount - order.computedNetAmount)}
 								</td>
 							</tr>
 						</tfoot>

@@ -10,7 +10,6 @@
 	$: orderItemsRows = Object.keys(orderItemsBySku)
 		.map((key) => ({ sku: key, ...orderItemsBySku[key] }))
 		.sort((a, b) => (a.totalPrice < b.totalPrice ? 1 : -1))
-		// .slice(0, 10)
 		.map((entry) => ({ ...entry, totalPrice: currencyFormatter(entry.totalPrice) }));
 
 	$: orderItemsTableSource = {
