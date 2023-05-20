@@ -1,22 +1,29 @@
 <script lang="ts">
 	import { Paginator, Table, tableMapperValues } from '@skeletonlabs/skeleton';
 	import { currencyFormatter } from '$lib/formatters';
-	import { orderItems } from '$lib/stores';
-	import { aggregateOrderItemsBySku } from '$lib/entities/orderItem/transforms';
+	import { customers } from '$lib/stores';
 	import type { PaginationSettings } from '@skeletonlabs/skeleton/dist/components/Paginator/types';
 
-	const orderItemsBySku = aggregateOrderItemsBySku($orderItems);
-	const orderItemsRows = Object.entries(orderItemsBySku)
-		.map(([key, value]) => ({ sku: key, ...value }))
-		.sort((a, b) => (a.totalPrice < b.totalPrice ? 1 : -1))
-		.map((entry) => ({ ...entry, totalPrice: currencyFormatter(entry.totalPrice) }));
+	const sortedCustomers = $customers
+		.map((customer) => ({
+			...customer,
+			ordersCount: customer.orders.length,
+			ordersTotalValue:
+				Math.round(
+					customer.orders.reduce(
+						(acc, { computedTotals: { orderValue } }) => (acc += orderValue),
+						0,
+					) * 100,
+				) / 100,
+		}))
+		.sort((a, b) => b.ordersTotalValue - a.ordersTotalValue)
+		.map((entry) => ({ ...entry, ordersTotalValue: currencyFormatter(entry.ordersTotalValue) }));
 
-	const tableHead = ['SKU', 'Item Name', 'Total Quantity', 'Total Price'];
-	const tableBody = tableMapperValues(orderItemsRows, [
-		'sku',
-		'itemName',
-		'totalQuantity',
-		'totalPrice',
+	const tableHead = ['Name', 'Orders Count', 'Orders Total Value'];
+	const tableBody = tableMapperValues(sortedCustomers, [
+		'fullName',
+		'ordersCount',
+		'ordersTotalValue',
 	]);
 
 	let page = {

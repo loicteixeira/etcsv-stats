@@ -2,9 +2,11 @@ import { z } from 'zod';
 
 export const orderCsvLineSchema = z
 	.object({
+		'Buyer User ID': z.string(),
 		'Coupon Code': z.string().optional(),
 		'Coupon Details': z.string().optional(),
 		'Discount Amount': z.coerce.number().nonnegative().default(0),
+		'Full Name': z.string(),
 		'Order ID': z.coerce.number().nonnegative(),
 		'Order Net': z.coerce.number().nonnegative().default(0),
 		'Order Value': z.coerce.number().nonnegative().default(0),
@@ -14,6 +16,8 @@ export const orderCsvLineSchema = z
 	})
 	.transform((line) => ({
 		id: line['Order ID'],
+		buyerID: line['Buyer User ID'],
+		buyerFullName: line['Full Name'],
 		couponCode: line['Coupon Code'],
 		couponDetails: line['Coupon Details'],
 		itemsDiscount: line['Discount Amount'],

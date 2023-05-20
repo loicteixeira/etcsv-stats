@@ -1,6 +1,6 @@
 import { derived, writable } from 'svelte/store';
 import type { TOrderItemCsvLine } from '$lib/entities/orderItem/model';
-import type { TOrderCsvLine } from '$lib/entities/order/model';
+import type { TOrder, TOrderCsvLine } from '$lib/entities/order/model';
 import type { TFileInfo } from '$lib/entities/file/model';
 import type { TStatementCsvLine } from '$lib/entities/statement/model';
 import { postProcessOrderItemCsvLine } from '$lib/entities/orderItem/transforms';
@@ -29,3 +29,24 @@ export const orders = derived(
 		return computeOrderDetails(orders, $orderItems, $statements);
 	},
 );
+
+export const customers = derived(orders, ($orders) => {
+	type TCustomer = {
+		key: string;
+		id: string;
+		fullName: string;
+		orders: TOrder[];
+	};
+	const customersByKey = $orders.reduce<Record<string, TCustomer>>((accumulator, currentValue) => {
+		const key = currentValue.buyerID || currentValue.buyerFullName;
+		accumulator[key] ||= {
+			key,
+			id: currentValue.buyerID,
+			fullName: currentValue.buyerFullName,
+			orders: [],
+		};
+		accumulator[key].orders.push(currentValue);
+		return accumulator;
+	}, {});
+	return Object.values(customersByKey);
+});
