@@ -30,6 +30,12 @@
 						>
 							<a href="/orders-details">Orders Details</a>
 						</li>
+						<li
+							class="px-2 py-1 rounded-md
+							{$page.route.id === '/order-items-stats' && currentPageClasses}"
+						>
+							<a href="/order-items-stats">Order Items Stats</a>
+						</li>
 					</ul>
 				</nav>
 			</svelte:fragment>
