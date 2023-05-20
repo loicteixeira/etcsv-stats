@@ -6,7 +6,6 @@
 
 <CSVFileDropzone
 	name="order-item-csvs"
-	title="Order Items CSVs"
 	files={orderItemCSVs}
 	recordSchema={orderItemCsvLineSchema}
 />

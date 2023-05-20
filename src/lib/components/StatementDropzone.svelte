@@ -4,9 +4,4 @@
 	import { statementCsvLineSchema } from '$lib/entities/statement/model';
 </script>
 
-<CSVFileDropzone
-	name="statement-csv"
-	title="Statements CSVs"
-	files={statementCSVs}
-	recordSchema={statementCsvLineSchema}
-/>
+<CSVFileDropzone name="statement-csv" files={statementCSVs} recordSchema={statementCsvLineSchema} />

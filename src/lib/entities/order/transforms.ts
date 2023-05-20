@@ -61,211 +61,204 @@ export function computeOrderDetails(
 		statements.filter(({ type }) => !['sale', 'vat'].includes(type)),
 	);
 
-	const results = orders
-		.map((order) => {
-			const orderItems = orderItemsByOrderId[order.id] ?? [];
-			const statementLines = statementByOrderId[order.id] ?? [];
+	return orders.map((order) => {
+		const orderItems = orderItemsByOrderId[order.id] ?? [];
+		const statementLines = statementByOrderId[order.id] ?? [];
 
-			const lines: TOrderLine[] = [];
+		const lines: TOrderLine[] = [];
 
-			if (orderItems.length > 0) {
-				orderItems.forEach(({ itemName, unitPrice, quantity, sku, totalPrice }, idx) => {
+		if (orderItems.length > 0) {
+			orderItems.forEach(({ itemName, unitPrice, quantity, sku, totalPrice }, idx) => {
+				lines.push({
+					badge: sku,
+					description: itemName,
+					unitPrice,
+					quantity,
+					total: totalPrice,
+					type: 'item',
+				});
+				lines.push({
+					description: `Listings fee #${idx}`,
+					total: -LISTING_FEE,
+					type: 'fees',
+				});
+				lines.push({
+					description: `VAT Listings fee #${idx}`,
+					total: Math.round(-LISTING_FEE * VAT_RATE * 100) / 100,
+					type: 'vat',
+				});
+			});
+		} else {
+			lines.push({
+				description:
+					'Missing order items information. ' +
+					'Did you upload an order items CSV for the same period as this order?',
+				type: 'warning',
+			});
+		}
+
+		if (order.itemsDiscount) {
+			const badge =
+				order.couponCode && !order.couponDetails?.includes('shipping') ? order.couponCode : '';
+			lines.push({
+				badge,
+				description: 'Order Discount',
+				total: -order.itemsDiscount,
+				type: 'itemsDiscount',
+			});
+		}
+
+		if (order.shipping) {
+			lines.push({
+				description: 'Shipping',
+				total: order.shipping,
+				type: 'shipping',
+			});
+		}
+
+		if (order.shippingDiscount) {
+			const badge =
+				order.couponCode && order.couponDetails?.includes('shipping') ? order.couponCode : '';
+			lines.push({
+				badge,
+				description: 'Shipping Discount',
+				total: -order.shippingDiscount,
+				type: 'shippingDiscount',
+			});
+		}
+
+		if (statementLines.length > 0) {
+			statementLines.forEach(({ amount, type, title }) => {
+				if (type === 'tax') {
 					lines.push({
-						badge: sku,
-						description: itemName,
-						unitPrice,
-						quantity,
-						total: totalPrice,
-						type: 'item',
+						description: 'Sales tax',
+						extraDescription: 'collected by Etsy on your behalf',
+						total: amount,
+						type: 'taxCollected',
 					});
 					lines.push({
-						description: `Listings fee #${idx}`,
-						total: -LISTING_FEE,
+						description: 'Sales tax',
+						extraDescription: 'paid by Etsy to the collector',
+						total: -amount,
+						type: 'taxPaid',
+					});
+				} else if (type === 'fee') {
+					lines.push({
+						description: title,
+						total: amount,
 						type: 'fees',
 					});
 					lines.push({
-						description: `VAT Listings fee #${idx}`,
-						total: Math.round(-LISTING_FEE * VAT_RATE * 100) / 100,
+						description: `VAT ${title}`,
+						total: amount * VAT_RATE,
 						type: 'vat',
 					});
-				});
-			} else {
-				lines.push({
-					description:
-						'Missing order items information. ' +
-						'Did you upload an order items CSV for the same period as this order?',
-					type: 'warning',
-				});
-			}
-
-			if (order.itemsDiscount) {
-				const badge =
-					order.couponCode && !order.couponDetails?.includes('shipping') ? order.couponCode : '';
-				lines.push({
-					badge,
-					description: 'Order Discount',
-					total: -order.itemsDiscount,
-					type: 'itemsDiscount',
-				});
-			}
-
-			if (order.shipping) {
-				lines.push({
-					description: 'Shipping',
-					total: order.shipping,
-					type: 'shipping',
-				});
-			}
-
-			if (order.shippingDiscount) {
-				const badge =
-					order.couponCode && order.couponDetails?.includes('shipping') ? order.couponCode : '';
-				lines.push({
-					badge,
-					description: 'Shipping Discount',
-					total: -order.shippingDiscount,
-					type: 'shippingDiscount',
-				});
-			}
-
-			if (statementLines.length > 0) {
-				statementLines.forEach(({ amount, type, title }) => {
-					if (type === 'tax') {
-						lines.push({
-							description: 'Sales tax',
-							extraDescription: 'collected by Etsy on your behalf',
-							total: amount,
-							type: 'taxCollected',
-						});
-						lines.push({
-							description: 'Sales tax',
-							extraDescription: 'paid by Etsy to the collector',
-							total: -amount,
-							type: 'taxPaid',
-						});
-					} else if (type === 'fee') {
-						lines.push({
-							description: title,
-							total: amount,
-							type: 'fees',
-						});
-						lines.push({
-							description: `VAT ${title}`,
-							total: amount * VAT_RATE,
-							type: 'vat',
-						});
-						// TODO: Fee with a positive amount as "credit" (happens with refunds)
-					} else if (type === 'refund') {
-						lines.push({
-							description: title,
-							total: amount,
-							type: 'refund',
-						});
-					} else {
-						console.warn(`Invalid line of type: ${type}`);
-					}
-				});
-			} else {
-				lines.push({
-					description:
-						'Missing statements information. ' +
-						'Did you upload a statement CSV for the same period as this order?',
-					type: 'warning',
-				});
-			}
-
-			type TTotalKey = Exclude<TOrderLine['type'], 'warning'>;
-			const totals = lines.reduce<Record<TTotalKey, number>>(
-				(acc, line) => {
-					if (line.type === 'warning') return acc;
-					acc[line.type] += line.total;
-					return acc;
-				},
-				{
-					item: 0,
-					itemsDiscount: 0,
-					refund: 0,
-					shipping: 0,
-					shippingDiscount: 0,
-					taxCollected: 0,
-					taxPaid: 0,
-					fees: 0,
-					vat: 0,
-				},
-			);
-			for (const [key, value] of Object.entries(totals)) {
-				totals[key as TTotalKey] = Math.round(value * 100) / 100;
-			}
-
-			const orderTotal =
-				Math.round(
-					(totals.item +
-						totals.itemsDiscount +
-						totals.shipping +
-						totals.shippingDiscount +
-						totals.taxCollected) *
-						100,
-				) / 100;
-
-			const orderNet =
-				Math.round(Object.values(totals).reduce((acc, val) => acc + val) * 100) / 100;
-
-			return {
-				...order,
-				lines: sortOrderLines(lines),
-				computedTotals: {
-					orderValue: totals.item,
-					orderTotal: orderTotal,
-					orderNet: orderNet,
-					...totals,
-				},
-			};
-		})
-		.sort((a, b) => ([2627560003, 2356475894].includes(a.id) ? -1 : 1)); // TODO: Remove after testing
-
-	return results;
-}
-
-type collapseOrderDetailsOptions = {
-	collapseOrder: boolean;
-	collapseFees: boolean;
-};
-export function collapseOrderDetails(orders: TOrder[], options: collapseOrderDetailsOptions) {
-	return orders.map((order) => {
-		const lines = order.lines.filter(({ type }) => {
-			if (
-				options.collapseOrder &&
-				['item', 'itemsDiscount', 'shipping', 'shippingDiscount', 'taxCollected'].includes(type)
-			)
-				return false;
-			if (options.collapseFees && ['fees', 'vat'].includes(type)) return false;
-			return true;
-		});
-
-		if (options.collapseOrder) {
+					// TODO: Fee with a positive amount as "credit" (happens with refunds)
+				} else if (type === 'refund') {
+					lines.push({
+						description: title,
+						total: amount,
+						type: 'refund',
+					});
+				} else {
+					console.warn(`Invalid line of type: ${type}`);
+				}
+			});
+		} else {
 			lines.push({
-				description: 'Order',
-				extraDescription: 'collapsed',
-				total: order.computedTotals.orderTotal,
-				type: 'item',
+				description:
+					'Missing statements information. ' +
+					'Did you upload a statement CSV for the same period as this order?',
+				type: 'warning',
 			});
 		}
 
-		if (options.collapseFees) {
-			const total = Math.round((order.computedTotals.fees + order.computedTotals.vat) * 100) / 100;
-			lines.push({
-				description: 'Fees',
-				extraDescription: 'collapsed',
-				total: total,
-				type: 'fees',
-			});
+		type TTotalKey = Exclude<TOrderLine['type'], 'warning'>;
+		const totals = lines.reduce<Record<TTotalKey, number>>(
+			(acc, line) => {
+				if (line.type === 'warning') return acc;
+				acc[line.type] += line.total;
+				return acc;
+			},
+			{
+				item: 0,
+				itemsDiscount: 0,
+				refund: 0,
+				shipping: 0,
+				shippingDiscount: 0,
+				taxCollected: 0,
+				taxPaid: 0,
+				fees: 0,
+				vat: 0,
+			},
+		);
+		for (const [key, value] of Object.entries(totals)) {
+			totals[key as TTotalKey] = Math.round(value * 100) / 100;
 		}
+
+		const orderTotal =
+			Math.round(
+				(totals.item +
+					totals.itemsDiscount +
+					totals.shipping +
+					totals.shippingDiscount +
+					totals.taxCollected) *
+					100,
+			) / 100;
+
+		const orderNet = Math.round(Object.values(totals).reduce((acc, val) => acc + val) * 100) / 100;
 
 		return {
 			...order,
 			lines: sortOrderLines(lines),
+			computedTotals: {
+				orderValue: totals.item,
+				orderTotal: orderTotal,
+				orderNet: orderNet,
+				...totals,
+			},
 		};
 	});
+}
+
+type collapseOrderDetailsOptions = {
+	collapseOrderLines: boolean;
+	collapseFeesLines: boolean;
+};
+export function collapseOrderDetails(order: TOrder, options: collapseOrderDetailsOptions) {
+	const lines = order.lines.filter(({ type }) => {
+		if (
+			options.collapseOrderLines &&
+			['item', 'itemsDiscount', 'shipping', 'shippingDiscount', 'taxCollected'].includes(type)
+		)
+			return false;
+		if (options.collapseFeesLines && ['fees', 'vat'].includes(type)) return false;
+		return true;
+	});
+
+	if (options.collapseOrderLines) {
+		lines.push({
+			description: 'Order',
+			extraDescription: 'collapsed',
+			total: order.computedTotals.orderTotal,
+			type: 'item',
+		});
+	}
+
+	if (options.collapseFeesLines) {
+		const total = Math.round((order.computedTotals.fees + order.computedTotals.vat) * 100) / 100;
+		lines.push({
+			description: 'Fees',
+			extraDescription: 'collapsed',
+			total: total,
+			type: 'fees',
+		});
+	}
+
+	return {
+		...order,
+		lines: sortOrderLines(lines),
+	};
 }
 
 function sortOrderLines(orderLInes: TOrderLine[]) {

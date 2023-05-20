@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { TFileInfo, TParseError } from '$lib/entities/file/model';
+	import type { TFileInfo } from '$lib/entities/file/model';
 	import { FileDropzone } from '@skeletonlabs/skeleton';
 	import type { Writable } from 'svelte/store';
 	import type { ZodType } from 'zod';
@@ -8,7 +8,6 @@
 	import { readCSV } from '$lib/files';
 
 	export let name: string;
-	export let title: string = 'Dropzone';
 	export let files: Writable<TFileInfo<any>[]>;
 	export let recordSchema: ZodType;
 
@@ -29,15 +28,13 @@
 	}
 </script>
 
-<div class="grow">
-	<p class="mb-3 h3">{title}</p>
-
+<div class="flex gap-6">
 	<FileDropzone
 		{name}
 		accept=".csv"
 		multiple
 		on:change={onChangeHandler}
-		class="my-3"
+		class="my-3 grow-0 max-w-xs"
 		slotLead="mb-4 flex justify-center"
 	>
 		<svelte:fragment slot="lead">

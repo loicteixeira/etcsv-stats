@@ -4,9 +4,4 @@
 	import { orderCsvLineSchema } from '$lib/entities/order/model';
 </script>
 
-<CSVFileDropzone
-	name="order-csv"
-	title="Order CSVs"
-	files={orderCSVs}
-	recordSchema={orderCsvLineSchema}
-/>
+<CSVFileDropzone name="order-csv" files={orderCSVs} recordSchema={orderCsvLineSchema} />
