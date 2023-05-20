@@ -6,6 +6,7 @@
 	import Icon from '@iconify/svelte';
 	import fileDescription from '@iconify/icons-tabler/file-description';
 	import { readCSV } from '$lib/files';
+	import { nGetText } from '$lib/translations';
 
 	export let name: string;
 	export let files: Writable<TFileInfo<any>[]>;
@@ -50,11 +51,17 @@
 				<li>
 					<Icon icon={fileDescription} />
 					<span>{filename}</span>
-					{#if records}
-						<span class="badge variant-filled-success">{records.length} lines(s)</span>
+					{#if records.length}
+						<span class="badge variant-filled-success">
+							{records.length}
+							{nGetText(records.length, 'line', 'lines')}
+						</span>
 					{/if}
 					{#if errors.length}
-						<span class="badge variant-filled-warning">{errors.length} error(s)</span>
+						<span class="badge variant-filled-warning">
+							{errors.length}
+							{nGetText(errors.length, 'error', 'errors')}
+						</span>
 					{/if}
 				</li>
 			{/each}
