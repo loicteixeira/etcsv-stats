@@ -57,4 +57,4 @@
 	}
 </script>
 
-<Table {columns} {rows} bind:sort />
+<Table {columns} {rows} pageSize={7} bind:sort />

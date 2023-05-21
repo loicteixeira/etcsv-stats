@@ -1,11 +1,17 @@
 <script lang="ts">
+	import CustomersStatsSummary from '$lib/components/CustomersStatsSummary.svelte';
 	import CustomersTable from '$lib/components/CustomersTable.svelte';
 	import { customers } from '$lib/stores';
 </script>
 
 {#if $customers.length}
+	<h1 class="h1 mb-6">Customers</h1>
 	<div class="mb-6">
-		<h2 class="mb-3 h2">Top Repeating customers</h2>
+		<h2 class="mb-3 h2">Summary</h2>
+		<CustomersStatsSummary />
+	</div>
+	<div class="mb-6">
+		<h2 class="mb-3 h2">Top Repeating</h2>
 		<CustomersTable />
 	</div>
 {:else}

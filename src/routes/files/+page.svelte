@@ -13,9 +13,9 @@
 	<CSVFileDropzone name="order-csv" files={orderCSVs} recordSchema={orderCsvLineSchema} />
 </div>
 
-<hr />
+<hr class="mb-6" />
 
-<div class="my-6">
+<div class="mb-6">
 	<h2 class="mb-3 h2">Order Items CSVs</h2>
 	<CSVFileDropzone
 		name="order-item-csvs"
@@ -24,9 +24,9 @@
 	/>
 </div>
 
-<hr />
+<hr class="mb-6" />
 
-<div class="my-6">
+<div class="mb-6">
 	<h2 class="mb-3 h2">Statements CSVs</h2>
 	<CSVFileDropzone
 		name="statement-csv"
