@@ -1,12 +1,17 @@
 <script lang="ts">
-	import OrderItemBySku from '$lib/components/OrderItemBySku.svelte';
+	import ProductTable from '$lib/components/ProductTable.svelte';
 	import { orderItems } from '$lib/stores';
 </script>
 
 {#if $orderItems.length}
+	<h1 class="h1 mb-6">Products</h1>
 	<div class="mb-6">
-		<h2 class="mb-3 h2">Order Items by SKU</h2>
-		<OrderItemBySku />
+		<h2 class="mb-3 h2">Summary</h2>
+		...
+	</div>
+	<div class="mb-6">
+		<h2 class="mb-3 h2">Details (by SKU)</h2>
+		<ProductTable />
 	</div>
 {:else}
 	<div class="grid place-items-center mt-12">
