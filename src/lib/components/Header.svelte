@@ -10,27 +10,18 @@
 		<a href="/">Etsy Stats</a></strong
 	>
 	<svelte:fragment slot="trail">
-		<nav class="flex-none">
-			<ul class="font-medium flex gap-3">
-				<li class="px-2 py-1 rounded-md {$page.route.id === '/files' && currentPageClasses}">
+		<nav>
+			<ul class="font-medium flex gap-6">
+				<li class={$page.route.id === '/files' ? currentPageClasses : ''}>
 					<a href="/files">Upload Files</a>
 				</li>
-				<li
-					class="px-2 py-1 rounded-md
-                    {$page.route.id === '/orders' && currentPageClasses}"
-				>
+				<li class={$page.route.id === '/orders' ? currentPageClasses : ''}>
 					<a href="/orders">Orders</a>
 				</li>
-				<li
-					class="px-2 py-1 rounded-md
-                    {$page.route.id === '/products' && currentPageClasses}"
-				>
+				<li class={$page.route.id === '/products' ? currentPageClasses : ''}>
 					<a href="/products">Products</a>
 				</li>
-				<li
-					class="px-2 py-1 rounded-md
-                    {$page.route.id === '/customers' && currentPageClasses}"
-				>
+				<li class={$page.route.id === '/customers' ? currentPageClasses : ''}>
 					<a href="/customers">Customers</a>
 				</li>
 			</ul>
