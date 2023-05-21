@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { Paginator } from '@skeletonlabs/skeleton';
 	import type { PaginationSettings } from '@skeletonlabs/skeleton/dist/components/Paginator/types';
+	import { createEventDispatcher } from 'svelte';
 
 	export let columns: {
 		id: string;
@@ -12,6 +13,9 @@
 	export let rows: any[] = [];
 	export let pageSize = 10;
 	export let sort = '';
+	export let interactive = false;
+
+	const dispatch = createEventDispatcher();
 
 	const sortOptions = columns.filter(({ sortable }) => sortable).map(({ id, text }) => [id, text]);
 	if (!sort && sortOptions.length) sort = `${sortOptions[0][0]}--asc`;
@@ -28,7 +32,7 @@
 	$: rowsSliced = rows.slice(page.offset * page.limit, page.offset * page.limit + page.limit);
 </script>
 
-<table class="table table-compact table-hover my-6">
+<table class="table table-compact table-hover my-6" class:interactive>
 	<thead>
 		<tr>
 			{#each columns as { id, text, headerClasses, sortable } (id)}
@@ -40,7 +44,11 @@
 	</thead>
 	<tbody>
 		{#each rowsSliced as row (row)}
-			<tr>
+			<tr
+				on:click={() => {
+					if (interactive) dispatch('selected', row);
+				}}
+			>
 				{#each row as cell, idx (cell)}
 					<td class={columns[idx].cellClasses}>{cell}</td>
 				{/each}
@@ -65,3 +73,9 @@
 	{/if}
 	<Paginator bind:settings={page} class="w-[50%]" />
 </div>
+
+<style>
+	table.interactive tbody tr:hover {
+		cursor: pointer;
+	}
+</style>

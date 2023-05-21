@@ -39,6 +39,7 @@ export type TOrder = TOrderCsvLine & {
 		orderNet: number;
 		// TODO: Dynamically pull from TTotalKey?
 		fees: number;
+		feesAndVAT: number;
 		item: number;
 		itemsDiscount: number;
 		refund: number;

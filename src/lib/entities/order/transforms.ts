@@ -36,6 +36,7 @@ export function postProcessOrderCsvLine(order: TOrderCsvLine): TOrder {
 			orderTotal: 0,
 			orderNet: 0,
 			fees: 0,
+			feesAndVAT: 0,
 			item: 0,
 			itemsDiscount: 0,
 			refund: 0,
@@ -173,14 +174,17 @@ export function computeOrderDetails(
 			});
 		}
 
-		type TTotalKey = Exclude<TOrderLine['type'], 'warning'>;
+		type TTotalKey = Exclude<TOrderLine['type'], 'warning'> | 'feesAndVAT';
 		const totals = lines.reduce<Record<TTotalKey, number>>(
 			(acc, line) => {
 				if (line.type === 'warning') return acc;
 				acc[line.type] += line.total;
+				if (['fees', 'vat'].includes(line.type)) acc['feesAndVAT'] += line.total;
 				return acc;
 			},
 			{
+				fees: 0,
+				feesAndVAT: 0,
 				item: 0,
 				itemsDiscount: 0,
 				refund: 0,
@@ -188,7 +192,6 @@ export function computeOrderDetails(
 				shippingDiscount: 0,
 				taxCollected: 0,
 				taxPaid: 0,
-				fees: 0,
 				vat: 0,
 			},
 		);
@@ -246,11 +249,10 @@ export function collapseOrderDetails(order: TOrder, options: collapseOrderDetail
 	}
 
 	if (options.collapseFeesLines) {
-		const total = Math.round((order.computedTotals.fees + order.computedTotals.vat) * 100) / 100;
 		lines.push({
 			description: 'Fees',
 			extraDescription: 'collapsed',
-			total: total,
+			total: order.computedTotals.fees,
 			type: 'fees',
 		});
 	}
