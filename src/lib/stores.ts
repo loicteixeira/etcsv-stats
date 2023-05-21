@@ -7,7 +7,7 @@ import { postProcessOrderItemCsvLine } from '$lib/entities/orderItem/transforms'
 import { postProcessStatementCsvLine } from './entities/statement/transforms';
 import { computeOrderDetails, postProcessOrderCsvLine } from './entities/order/transforms';
 import { fakeOrderCSVs, fakeOrderItemCSVs, fakeStatementCSVs } from './mocks'; // TODO: Remove
-import type { TCustomer } from './entities/customer/model';
+import { getCustomers } from './entities/customer/transforms';
 
 // CSV stores
 export const orderItemCSVs = writable<TFileInfo<TOrderItemCsvLine>[]>(fakeOrderItemCSVs);
@@ -32,23 +32,6 @@ export const orders = derived(
 );
 
 export const customers = derived(orders, ($orders) => {
-	const customersByKey = $orders.reduce<Record<string, TCustomer>>((accumulator, currentValue) => {
-		const key = currentValue.buyerID || currentValue.buyerFullName;
-		accumulator[key] ||= {
-			key,
-			id: currentValue.buyerID,
-			fullName: currentValue.buyerFullName,
-			orders: [],
-			ordersCount: 0,
-			ordersTotalValue: 0,
-		};
-		accumulator[key].orders.push(currentValue);
-		accumulator[key].ordersCount += 1;
-		accumulator[key].ordersTotalValue += currentValue.computedTotals.orderValue;
-		return accumulator;
-	}, {});
-	return Object.values(customersByKey).map((customer) => ({
-		...customer,
-		ordersTotalValue: Math.round(customer.ordersTotalValue * 100) / 100,
-	}));
+	// TODO: Extract last name for table ordering
+	return getCustomers($orders);
 });
