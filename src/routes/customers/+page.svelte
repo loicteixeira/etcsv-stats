@@ -1,12 +1,12 @@
 <script lang="ts">
-	import CustomersByOrderValue from '$lib/components/CustomersByOrderValue.svelte';
+	import CustomersTable from '$lib/components/CustomersTable.svelte';
 	import { customers } from '$lib/stores';
 </script>
 
 {#if $customers.length}
 	<div class="mb-6">
 		<h2 class="mb-3 h2">Top Repeating customers</h2>
-		<CustomersByOrderValue />
+		<CustomersTable />
 	</div>
 {:else}
 	<div class="grid place-items-center mt-12">

@@ -1,12 +1,13 @@
 import { derived, writable } from 'svelte/store';
 import type { TOrderItemCsvLine } from '$lib/entities/orderItem/model';
-import type { TOrder, TOrderCsvLine } from '$lib/entities/order/model';
+import type { TOrderCsvLine } from '$lib/entities/order/model';
 import type { TFileInfo } from '$lib/entities/file/model';
 import type { TStatementCsvLine } from '$lib/entities/statement/model';
 import { postProcessOrderItemCsvLine } from '$lib/entities/orderItem/transforms';
 import { postProcessStatementCsvLine } from './entities/statement/transforms';
 import { computeOrderDetails, postProcessOrderCsvLine } from './entities/order/transforms';
 import { fakeOrderCSVs, fakeOrderItemCSVs, fakeStatementCSVs } from './mocks'; // TODO: Remove
+import type { TCustomer } from './entities/customer/model';
 
 // CSV stores
 export const orderItemCSVs = writable<TFileInfo<TOrderItemCsvLine>[]>(fakeOrderItemCSVs);
@@ -31,12 +32,6 @@ export const orders = derived(
 );
 
 export const customers = derived(orders, ($orders) => {
-	type TCustomer = {
-		key: string;
-		id: string;
-		fullName: string;
-		orders: TOrder[];
-	};
 	const customersByKey = $orders.reduce<Record<string, TCustomer>>((accumulator, currentValue) => {
 		const key = currentValue.buyerID || currentValue.buyerFullName;
 		accumulator[key] ||= {
@@ -44,9 +39,16 @@ export const customers = derived(orders, ($orders) => {
 			id: currentValue.buyerID,
 			fullName: currentValue.buyerFullName,
 			orders: [],
+			ordersCount: 0,
+			ordersTotalValue: 0,
 		};
 		accumulator[key].orders.push(currentValue);
+		accumulator[key].ordersCount += 1;
+		accumulator[key].ordersTotalValue += currentValue.computedTotals.orderValue;
 		return accumulator;
 	}, {});
-	return Object.values(customersByKey);
+	return Object.values(customersByKey).map((customer) => ({
+		...customer,
+		ordersTotalValue: Math.round(customer.ordersTotalValue * 100) / 100,
+	}));
 });
