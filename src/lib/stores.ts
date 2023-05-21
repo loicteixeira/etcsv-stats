@@ -32,6 +32,5 @@ export const orders = derived(
 );
 
 export const customers = derived(orders, ($orders) => {
-	// TODO: Extract last name for table ordering
 	return getCustomers($orders);
 });

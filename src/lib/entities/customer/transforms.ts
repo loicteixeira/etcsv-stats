@@ -8,6 +8,7 @@ export function getCustomers(orders: TOrder[]) {
 			key,
 			id: currentValue.buyerID,
 			fullName: currentValue.buyerFullName,
+			lastName: currentValue.buyerLastName,
 			orders: [],
 			ordersCount: 0,
 			ordersTotalValue: 0,

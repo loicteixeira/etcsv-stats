@@ -9,7 +9,7 @@
 	const columns = [
 		{
 			id: 'name',
-			text: 'Name',
+			text: 'Last Name',
 			sortable: true,
 		},
 		{
@@ -36,7 +36,7 @@
 				let comp;
 				switch (column) {
 					case 'name':
-						comp = a.fullName.localeCompare(b.fullName);
+						comp = a.lastName.localeCompare(b.lastName);
 						break;
 					case 'count': // Orders count with tie on orders total value
 						comp = a.ordersCount - b.ordersCount || a.ordersTotalValue - b.ordersTotalValue;
