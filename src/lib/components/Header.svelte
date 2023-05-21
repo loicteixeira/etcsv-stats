@@ -13,25 +13,25 @@
 		<nav class="flex-none">
 			<ul class="font-medium flex gap-3">
 				<li class="px-2 py-1 rounded-md {$page.route.id === '/files' && currentPageClasses}">
-					<a href="/files">Files</a>
+					<a href="/files">Upload Files</a>
 				</li>
 				<li
 					class="px-2 py-1 rounded-md
-                    {$page.route.id === '/orders-details' && currentPageClasses}"
+                    {$page.route.id === '/orders' && currentPageClasses}"
 				>
-					<a href="/orders-details">Orders Details</a>
+					<a href="/orders">Orders</a>
 				</li>
 				<li
 					class="px-2 py-1 rounded-md
-                    {$page.route.id === '/order-items-stats' && currentPageClasses}"
+                    {$page.route.id === '/products' && currentPageClasses}"
 				>
-					<a href="/order-items-stats">Order Items Stats</a>
+					<a href="/products">Products</a>
 				</li>
 				<li
 					class="px-2 py-1 rounded-md
-                    {$page.route.id === '/customers-stats' && currentPageClasses}"
+                    {$page.route.id === '/customers' && currentPageClasses}"
 				>
-					<a href="/customers-stats">Customers Stats</a>
+					<a href="/customers">Customers</a>
 				</li>
 			</ul>
 		</nav>
