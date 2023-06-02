@@ -2,7 +2,7 @@
 	import Table from '$lib/components/Table.svelte';
 	import { aggregateOrderItemsBySku } from '$lib/entities/orderItem/transforms';
 	import { currencyFormatter } from '$lib/formatters';
-	import { orderItems } from '$lib/stores';
+	import { orderItemCSVLines } from '$lib/stores';
 
 	let rows: any[][] = [];
 	let sort = 'gross--desc';
@@ -37,7 +37,7 @@
 	$: {
 		const [column, direction] = sort.split('--');
 		const directionModifier = direction == 'asc' ? 1 : -1;
-		const orderItemsBySku = aggregateOrderItemsBySku($orderItems);
+		const orderItemsBySku = aggregateOrderItemsBySku($orderItemCSVLines);
 		rows = Object.entries(orderItemsBySku)
 			.map(([key, value]) => ({ sku: key, ...value }))
 			.sort((a, b) => {

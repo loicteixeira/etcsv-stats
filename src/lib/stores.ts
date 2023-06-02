@@ -9,25 +9,29 @@ import { computeOrderDetails, postProcessOrderCsvLine } from './entities/order/t
 import { fakeOrderCSVs, fakeOrderItemCSVs, fakeStatementCSVs } from './mocks'; // TODO: Remove
 import { getCustomers } from './entities/customer/transforms';
 
-// CSV stores
+// Base: CSV files
 export const orderItemCSVs = writable<TFileInfo<TOrderItemCsvLine>[]>(fakeOrderItemCSVs);
 export const orderCSVs = writable<TFileInfo<TOrderCsvLine>[]>(fakeOrderCSVs);
 export const statementCSVs = writable<TFileInfo<TStatementCsvLine>[]>(fakeStatementCSVs);
 
-// Cleaned up data
-export const orderItems = derived(orderItemCSVs, ($orderItemCSVs) =>
+// Derived: CSV lines
+export const orderItemCSVLines = derived(orderItemCSVs, ($orderItemCSVs) =>
 	$orderItemCSVs.flatMap((fileInfo) => fileInfo.records.map(postProcessOrderItemCsvLine)),
 );
 
-export const statements = derived(statementCSVs, ($statementCSVs) =>
+export const statementCSVLines = derived(statementCSVs, ($statementCSVs) =>
 	$statementCSVs.flatMap((fileInfo) => fileInfo.records.map(postProcessStatementCsvLine)),
 );
 
+export const orderCSVLines = derived(orderCSVs, ($orderCSVs) =>
+	$orderCSVs.flatMap((fileInfo) => fileInfo.records.map(postProcessOrderCsvLine)),
+);
+
+// Derived: Cleaned up data
 export const orders = derived(
-	[orderCSVs, orderItems, statements],
-	([$orderCSVs, $orderItems, $statements]) => {
-		const orders = $orderCSVs.flatMap((fileInfo) => fileInfo.records.map(postProcessOrderCsvLine));
-		return computeOrderDetails(orders, $orderItems, $statements);
+	[orderCSVLines, orderItemCSVLines, statementCSVLines],
+	([$orderCSVLines, $orderItemCSVLines, $statementCSVLines]) => {
+		return computeOrderDetails($orderCSVLines, $orderItemCSVLines, $statementCSVLines);
 	},
 );
 
