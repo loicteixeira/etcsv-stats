@@ -3,6 +3,7 @@
 	import OrderDetails from '$lib/components/OrderDetails.svelte';
 	import OrdersTable from '$lib/components/OrdersTable.svelte';
 	import { orders } from '$lib/stores';
+	import { dev } from '$app/environment';
 
 	let collapseOrderLines = false;
 	let collapseFeesLines = true;
@@ -30,13 +31,29 @@
 	<Drawer position="right" width="w-[75%]">
 		<div class="h-full p-6 bg-surface-600">
 			<button
-				class="mb-12 text-right anchor"
+				class="mb-12 anchor"
 				on:click={() => {
 					drawerStore.close();
 				}}
 			>
 				Close
 			</button>
+
+			{#if dev}
+				<button
+					class="mb-12 ml-4 anchor"
+					on:click={() => {
+						console.group(`Order ID: ${$drawerStore.meta.order.id}`);
+						console.table($drawerStore.meta.order.lines);
+						console.table($drawerStore.meta.order.computedTotals);
+						console.log($drawerStore.meta.order);
+						console.groupEnd();
+					}}
+				>
+					Debug
+				</button>
+			{/if}
+
 			<h3 class="h1 mb-6">Order #{$drawerStore.id}</h3>
 
 			<div class="flex justify-end items-center gap-12 mb-6 px-4">
