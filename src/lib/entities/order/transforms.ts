@@ -209,7 +209,11 @@ export function computeOrderDetails(
 					100,
 			) / 100;
 
-		const orderNet = Math.round(Object.values(totals).reduce((acc, val) => acc + val) * 100) / 100;
+		const totalsWithoutDuplicates = Object.entries(totals)
+			.filter(([key]) => key !== 'feesAndVAT')
+			.map(([, value]) => value);
+		const orderNet =
+			Math.round(totalsWithoutDuplicates.reduce((acc, val) => acc + val) * 100) / 100;
 
 		return {
 			...order,
@@ -252,7 +256,7 @@ export function collapseOrderDetails(order: TOrder, options: collapseOrderDetail
 		lines.push({
 			description: 'Fees',
 			extraDescription: 'collapsed',
-			total: order.computedTotals.fees,
+			total: order.computedTotals.feesAndVAT,
 			type: 'fees',
 		});
 	}
