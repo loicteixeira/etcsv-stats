@@ -14,21 +14,46 @@ export const orderItemCsvLineSchema = z
 		'Shipping Discount': z.coerce.number().nonnegative().optional().default(0),
 		SKU: z.string(),
 		'Transaction ID': z.coerce.number(),
+		Variations: z.string(),
 	})
-	.transform((line) => ({
-		discount: line['Discount Amount'],
-		itemName: line['Item Name'],
-		totalPrice: line['Item Total'],
-		listingID: line['Listing ID'],
-		orderId: line['Order ID'],
-		orderSalesTax: line['Order Sales Tax'],
-		shipping: line['Order Shipping'],
-		unitPrice: line['Price'],
-		quantity: line['Quantity'],
-		shippingDiscount: line['Shipping Discount'],
-		sku: line['SKU'],
-		transactionID: line['Transaction ID'],
-	}));
+	.transform((line) => {
+		const variations: Record<string, string> = Object.fromEntries(
+			line['Variations']
+				.split(',')
+				.filter(Boolean)
+				.map((variation) => variation.split(':'))
+				.filter((pair) => {
+					if (pair.length !== 2) {
+						console.warn(`Invalid variation pair: ${pair}`);
+						return false;
+					}
+					return true;
+				}),
+		);
+		const variationsKey = Object.entries(variations)
+			.filter(([key]) => key !== 'Personalization')
+			.flatMap((value) => value)
+			.map((value) => value.toLowerCase().replace(/\s*/g, ''))
+			.sort()
+			.join('');
+
+		return {
+			discount: line['Discount Amount'],
+			itemName: line['Item Name'],
+			totalPrice: line['Item Total'],
+			listingID: line['Listing ID'],
+			orderId: line['Order ID'],
+			orderSalesTax: line['Order Sales Tax'],
+			shipping: line['Order Shipping'],
+			unitPrice: line['Price'],
+			quantity: line['Quantity'],
+			shippingDiscount: line['Shipping Discount'],
+			sku: line['SKU'],
+			transactionID: line['Transaction ID'],
+			variations: variations,
+			variationsKey,
+		};
+	});
 
 export type TOrderItemCsvLine = z.infer<typeof orderItemCsvLineSchema>;
 
