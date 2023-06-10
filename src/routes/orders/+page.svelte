@@ -22,6 +22,7 @@
 	<div class="mb-6">
 		<h2 class="mb-3 h2">Summary</h2>
 		...
+		<!-- Orders Count ; Orders Gross ; Orders Net -->
 	</div>
 	<div class="mb-6">
 		<h2 class="mb-3 h2">Details</h2>
