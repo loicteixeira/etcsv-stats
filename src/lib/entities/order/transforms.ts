@@ -1,5 +1,5 @@
-import type { TOrderItem } from '../orderItem/model';
-import { getOrderItemsByOrderId } from '../orderItem/transforms';
+import type { TOrderItemCsvLine } from '../orderItem/model';
+import { getOrderItemCsvLinesByOrderID } from '../orderItem/transforms';
 import type { TStatement } from '../statement/model';
 import { getStatementsByOrderId } from '../statement/transforms';
 import type { TOrder, TOrderCsvLine, TOrderLine } from './model';
@@ -51,10 +51,10 @@ export function postProcessOrderCsvLine(order: TOrderCsvLine): TOrder {
 
 export function computeOrderDetails(
 	orders: TOrder[],
-	orderItems: TOrderItem[],
+	orderItems: TOrderItemCsvLine[],
 	statements: TStatement[],
 ): TOrder[] {
-	const orderItemsByOrderId = getOrderItemsByOrderId(orderItems);
+	const orderItemCsvLinesByOrderId = getOrderItemCsvLinesByOrderID(orderItems);
 	const statementByOrderId = getStatementsByOrderId(
 		// Exclude:
 		// - Sales which are already counted in the corresponding order
@@ -63,13 +63,13 @@ export function computeOrderDetails(
 	);
 
 	return orders.map((order) => {
-		const orderItems = orderItemsByOrderId[order.id] ?? [];
+		const orderItemCsvLine = orderItemCsvLinesByOrderId[order.id] ?? [];
 		const statementLines = statementByOrderId[order.id] ?? [];
 
 		const lines: TOrderLine[] = [];
 
-		if (orderItems.length > 0) {
-			orderItems.forEach(({ itemName, unitPrice, quantity, sku, totalPrice }, idx) => {
+		if (orderItemCsvLine.length > 0) {
+			orderItemCsvLine.forEach(({ itemName, unitPrice, quantity, sku, totalPrice }, idx) => {
 				lines.push({
 					badge: sku,
 					description: itemName,

@@ -49,7 +49,7 @@
 					if (interactive) dispatch('selected', row);
 				}}
 			>
-				{#each row as cell, idx (cell)}
+				{#each row as cell, idx (idx)}
 					<td class={columns[idx].cellClasses}>{cell}</td>
 				{/each}
 			</tr>

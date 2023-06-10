@@ -19,7 +19,7 @@ export type TStatementCsvLine = z.infer<typeof statementCsvLineSchema>;
 export type TStatement = {
 	amount: number;
 	info: string;
-	orderId: number | null;
+	orderID: number | null;
 	type: string;
 	title: string;
 };

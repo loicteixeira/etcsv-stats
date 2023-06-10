@@ -7,12 +7,12 @@ export function postProcessStatementCsvLine({
 	title,
 }: TStatementCsvLine): TStatement {
 	// Try to find the order ID
-	const orderIdTextCandidate =
+	const orderIDTextCandidate =
 		(info.toLowerCase().includes('order') && info) ||
 		(title.toLowerCase().includes('order') && title) ||
 		'';
-	const orderIdMatch = orderIdTextCandidate.match(/[0-9]+/)?.[0];
-	const orderId = orderIdMatch ? parseInt(orderIdMatch) : null;
+	const orderIDMatch = orderIDTextCandidate.match(/[0-9]+/)?.[0];
+	const orderID = orderIDMatch ? parseInt(orderIDMatch) : null;
 
 	// Cleanup info and title
 	const orderTextPattern = /order(?: #|: )\d+/i;
@@ -29,7 +29,7 @@ export function postProcessStatementCsvLine({
 	return {
 		amount: cleanedAmount,
 		info: cleanedInfo,
-		orderId,
+		orderID,
 		type: type.toLocaleLowerCase(),
 		title: cleanedTitle,
 	};
@@ -37,9 +37,9 @@ export function postProcessStatementCsvLine({
 
 export function getStatementsByOrderId(statements: TStatement[]) {
 	return statements.reduce<Record<number, TStatement[]>>((accumulator, currentValue) => {
-		if (currentValue.orderId) {
-			accumulator[currentValue.orderId] ||= [];
-			accumulator[currentValue.orderId].push(currentValue);
+		if (currentValue.orderID) {
+			accumulator[currentValue.orderID] ||= [];
+			accumulator[currentValue.orderID].push(currentValue);
 		}
 		return accumulator;
 	}, {});

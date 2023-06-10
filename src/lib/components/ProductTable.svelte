@@ -2,10 +2,10 @@
 	import Table from '$lib/components/Table.svelte';
 	import { aggregateOrderItemsBySku } from '$lib/entities/orderItem/transforms';
 	import { currencyFormatter } from '$lib/formatters';
-	import { orderItemCSVLines } from '$lib/stores';
+	import { orderItems } from '$lib/stores';
 
 	let rows: any[][] = [];
-	let sort = 'gross--desc';
+	let sort = 'grossAfterDiscount--desc';
 
 	const columns = [
 		{
@@ -20,14 +20,28 @@
 		},
 		{
 			id: 'quantity',
-			text: 'Total Quantity',
+			text: 'Quantity',
 			headerClasses: 'table-cell-fit',
 			cellClasses: 'text-right',
 			sortable: true,
 		},
 		{
-			id: 'gross',
-			text: 'Total Gross Value',
+			id: 'grossBeforeDiscount',
+			text: 'Gross Pre Discounts',
+			headerClasses: 'table-cell-fit',
+			cellClasses: 'text-right',
+			sortable: true,
+		},
+		{
+			id: 'discount',
+			text: 'Discounts',
+			headerClasses: 'table-cell-fit',
+			cellClasses: 'text-right',
+			sortable: true,
+		},
+		{
+			id: 'grossAfterDiscount',
+			text: 'Gross Aft Discounts',
 			headerClasses: 'table-cell-fit',
 			cellClasses: 'text-right',
 			sortable: true,
@@ -37,7 +51,7 @@
 	$: {
 		const [column, direction] = sort.split('--');
 		const directionModifier = direction == 'asc' ? 1 : -1;
-		const orderItemsBySku = aggregateOrderItemsBySku($orderItemCSVLines);
+		const orderItemsBySku = aggregateOrderItemsBySku($orderItems);
 		rows = Object.entries(orderItemsBySku)
 			.map(([key, value]) => ({ sku: key, ...value }))
 			.sort((a, b) => {
@@ -50,22 +64,45 @@
 						comp = a.itemName.localeCompare(b.itemName) || a.sku.localeCompare(b.sku);
 						break;
 					case 'quantity': // Quantity with tie on total gross value
-						comp = a.totalQuantity - b.totalQuantity || a.totalPrice - b.totalPrice;
+						comp =
+							a.totalQuantity - b.totalQuantity ||
+							a.totalGrossBeforeDiscounts - b.totalGrossBeforeDiscounts;
 						break;
-					case 'gross': // Total gross value with tie on quantity
-						comp = a.totalPrice - b.totalPrice || a.totalQuantity - b.totalQuantity;
+					case 'grossBeforeDiscount': // Total gross before discounts value with tie on quantity
+						comp =
+							a.totalGrossBeforeDiscounts - b.totalGrossBeforeDiscounts ||
+							a.totalQuantity - b.totalQuantity;
+						break;
+					case 'grossAfterDiscount': // Total gross after discounts value with tie on quantity
+						comp =
+							a.totalGrossAfterDiscounts - b.totalGrossAfterDiscounts ||
+							a.totalQuantity - b.totalQuantity;
+						break;
+					case 'discounts': // Total discounts value with tie on quantity
+						comp = a.totalDiscounts - b.totalDiscounts || a.totalQuantity - b.totalQuantity;
 						break;
 					default:
 						comp = 0;
 				}
 				return comp * directionModifier;
 			})
-			.map(({ sku, itemName, totalQuantity, totalPrice }) => [
-				sku,
-				itemName,
-				totalQuantity,
-				currencyFormatter(totalPrice),
-			]);
+			.map(
+				({
+					itemName,
+					sku,
+					totalDiscounts,
+					totalGrossBeforeDiscounts,
+					totalGrossAfterDiscounts,
+					totalQuantity,
+				}) => [
+					sku,
+					itemName,
+					totalQuantity,
+					currencyFormatter(totalGrossBeforeDiscounts),
+					currencyFormatter(totalDiscounts),
+					currencyFormatter(totalGrossAfterDiscounts),
+				],
+			);
 	}
 </script>
 

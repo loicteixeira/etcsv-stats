@@ -16,7 +16,7 @@
 		},
 		{
 			id: 'gross',
-			text: 'Total Gross',
+			text: 'Gross',
 			headerClasses: 'table-cell-fit',
 			cellClasses: 'text-right',
 			sortable: true,
@@ -30,7 +30,7 @@
 		},
 		{
 			id: 'net',
-			text: 'Total Net',
+			text: 'Net',
 			headerClasses: 'table-cell-fit',
 			cellClasses: 'text-right',
 			sortable: true,

@@ -1,9 +1,9 @@
 <script lang="ts">
 	import ProductTable from '$lib/components/ProductTable.svelte';
-	import { orderItemCSVLines } from '$lib/stores';
+	import { orderItems } from '$lib/stores';
 </script>
 
-{#if $orderItemCSVLines.length}
+{#if $orderItems.length}
 	<h1 class="h1 mb-6">Products</h1>
 	<div class="mb-6">
 		<h2 class="mb-3 h2">Summary</h2>

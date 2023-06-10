@@ -42,7 +42,7 @@ export const orderItemCsvLineSchema = z
 			itemName: line['Item Name'],
 			totalPrice: line['Item Total'],
 			listingID: line['Listing ID'],
-			orderId: line['Order ID'],
+			orderID: line['Order ID'],
 			orderSalesTax: line['Order Sales Tax'],
 			shipping: line['Order Shipping'],
 			unitPrice: line['Price'],
@@ -57,10 +57,29 @@ export const orderItemCsvLineSchema = z
 
 export type TOrderItemCsvLine = z.infer<typeof orderItemCsvLineSchema>;
 
-export type TOrderItem = TOrderItemCsvLine;
+export type TOrderItem = {
+	itemName: string;
+	listingID: number;
+	orderID: number;
+	sku: string;
+	transactionID: number;
+	variations: Record<string, string>;
+	variationsKey: string;
+	computedTotals: {
+		quantity: number;
+		unitPrice: number;
+		totalDiscounts?: number;
+		totalGrossBeforeDiscounts: number;
+		totalGrossAfterDiscounts?: number;
+		totalNet?: number;
+	};
+};
 
 export type TOrderItemTotal = {
 	itemName: string;
-	totalPrice: number;
+	totalDiscounts: number;
+	totalGrossAfterDiscounts: number;
+	totalGrossBeforeDiscounts: number;
+	totalNet: number;
 	totalQuantity: number;
 };
