@@ -9,8 +9,6 @@
 	import { AppShell } from '@skeletonlabs/skeleton';
 	import Header from '$lib/components/Header.svelte';
 	import Footer from '$lib/components/Footer.svelte';
-
-	const currentPageClasses = 'underline underline-offset-2 decoration-primary-500';
 </script>
 
 <AppShell>
