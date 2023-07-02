@@ -1,18 +1,20 @@
 <script lang="ts">
 	import { RadioGroup, RadioItem } from '@skeletonlabs/skeleton';
 	import Table from '$lib/components/Table.svelte';
-	import { aggregateOrderItemsBySku } from '$lib/entities/orderItem/transforms';
+	import {
+		aggregateOrderItemsBySku,
+		aggregateOrderItemBySkuAndVariant,
+	} from '$lib/entities/orderItem/transforms';
 	import { currencyFormatter } from '$lib/formatters';
 	import { orderItems } from '$lib/stores';
 
 	let rows: any[][] = [];
 	let sort = 'grossAfterDiscount--desc';
 	let grouping: 'sku' | 'variant' = 'sku';
-
-	const columns = [
+	let columns = [
 		{
-			id: 'sku',
-			text: 'SKU',
+			id: 'key', // Will stay the same, regardless of grouping
+			text: '', // Will be updated depending on grouping
 			sortable: true,
 		},
 		{
@@ -50,20 +52,24 @@
 		},
 	];
 
+	$: columns[0].text = grouping === 'sku' ? 'SKU' : 'SKU & Variant';
+
 	$: {
 		const [column, direction] = sort.split('--');
 		const directionModifier = direction == 'asc' ? 1 : -1;
-		const groupedOrderItems = aggregateOrderItemsBySku($orderItems);
+		const groupingFunction =
+			grouping === 'sku' ? aggregateOrderItemsBySku : aggregateOrderItemBySkuAndVariant;
+		const groupedOrderItems = groupingFunction($orderItems);
 		rows = Object.entries(groupedOrderItems)
-			.map(([key, value]) => ({ sku: key, ...value }))
+			.map(([key, value]) => ({ key: key, ...value }))
 			.sort((a, b) => {
 				let comp;
 				switch (column) {
-					case 'sku':
-						comp = a.sku.localeCompare(b.sku);
+					case 'key':
+						comp = a.key.localeCompare(b.key);
 						break;
-					case 'name': // Name with tie on SKU
-						comp = a.itemName.localeCompare(b.itemName) || a.sku.localeCompare(b.sku);
+					case 'name': // Name with tie on key
+						comp = a.itemName.localeCompare(b.itemName) || a.key.localeCompare(b.key);
 						break;
 					case 'quantity': // Quantity with tie on total gross value
 						comp =
@@ -93,17 +99,24 @@
 					itemName,
 					sku,
 					totalDiscounts,
-					totalGrossBeforeDiscounts,
 					totalGrossAfterDiscounts,
+					totalGrossBeforeDiscounts,
 					totalQuantity,
-				}) => [
-					sku,
-					itemName,
-					totalQuantity,
-					currencyFormatter(totalGrossBeforeDiscounts),
-					currencyFormatter(totalDiscounts),
-					currencyFormatter(totalGrossAfterDiscounts),
-				],
+					variations,
+				}) => {
+					const joinedVariations = Object.entries(variations)
+						.map(([key, value]) => `${key}: ${value}`)
+						.join(', ');
+					const title = joinedVariations ? `${sku} (${joinedVariations})` : sku;
+					return [
+						title,
+						itemName,
+						totalQuantity,
+						currencyFormatter(totalGrossBeforeDiscounts),
+						currencyFormatter(totalDiscounts),
+						currencyFormatter(totalGrossAfterDiscounts),
+					];
+				},
 			);
 	}
 </script>

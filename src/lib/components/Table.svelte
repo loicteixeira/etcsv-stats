@@ -1,24 +1,28 @@
+<script context="module" lang="ts">
+	export type TColumn = {
+		cellClasses?: string;
+		headerClasses?: string;
+		id: string;
+		sortable?: boolean;
+		text: string;
+	};
+</script>
+
 <script lang="ts">
 	import { Paginator } from '@skeletonlabs/skeleton';
 	import type { PaginationSettings } from '@skeletonlabs/skeleton/dist/components/Paginator/types';
 	import { createEventDispatcher } from 'svelte';
 
-	export let columns: {
-		id: string;
-		text: string;
-		headerClasses?: string;
-		cellClasses?: string;
-		sortable?: boolean;
-	}[];
-	export let rows: any[] = [];
-	export let pageSize = 10;
-	export let sort = '';
+	export let columns: TColumn[];
 	export let interactive = false;
+	export let pageSize = 10;
+	export let rows: any[] = [];
+	export let sort = '';
 
 	const dispatch = createEventDispatcher();
 
-	const sortOptions = columns.filter(({ sortable }) => sortable).map(({ id, text }) => [id, text]);
-	if (!sort && sortOptions.length) sort = `${sortOptions[0][0]}--asc`;
+	let sortOptions: [string, string][] = [];
+	$: sortOptions = columns.filter(({ sortable }) => sortable).map(({ id, text }) => [id, text]);
 
 	let page = {
 		offset: 0,
@@ -55,7 +59,7 @@
 <table class="table table-compact table-hover my-6" class:interactive>
 	<thead>
 		<tr>
-			{#each columns as { id, text, headerClasses, sortable } (id)}
+			{#each columns as { id, text, headerClasses } (id)}
 				<th class={headerClasses}>
 					{text}
 				</th>

@@ -27,11 +27,14 @@ export const orderItemCsvLineSchema = z
 						console.warn(`Invalid variation pair: ${pair}`);
 						return false;
 					}
+					// Ignore Personalization which is always unique
+					if (pair[0] === 'Personalization') {
+						return false;
+					}
 					return true;
 				}),
 		);
 		const variationsKey = Object.entries(variations)
-			.filter(([key]) => key !== 'Personalization')
 			.flatMap((value) => value)
 			.map((value) => value.toLowerCase().replace(/\s*/g, ''))
 			.sort()
@@ -77,9 +80,11 @@ export type TOrderItem = {
 
 export type TOrderItemTotal = {
 	itemName: string;
+	sku: string;
 	totalDiscounts: number;
 	totalGrossAfterDiscounts: number;
 	totalGrossBeforeDiscounts: number;
 	totalNet: number;
 	totalQuantity: number;
+	variations: Record<string, string>;
 };
