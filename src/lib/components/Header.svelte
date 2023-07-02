@@ -7,7 +7,7 @@
 
 <AppBar slotTrail="place-content-end" shadow="drop-shadow-lg">
 	<strong class="h1 {$page.route.id === '/' && currentPageClasses}">
-		<a href="/">Etsy Stats</a></strong
+		<a href="/">EtCsv Stats</a></strong
 	>
 	<svelte:fragment slot="trail">
 		<nav>

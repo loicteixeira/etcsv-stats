@@ -133,13 +133,13 @@ export function computeOrderDetails(
 				if (type === 'tax') {
 					lines.push({
 						description: 'Sales tax',
-						extraDescription: 'collected by Etsy on your behalf',
+						extraDescription: 'collected by EtCsv on your behalf',
 						total: amount,
 						type: 'taxCollected',
 					});
 					lines.push({
 						description: 'Sales tax',
-						extraDescription: 'paid by Etsy to the collector',
+						extraDescription: 'paid by EtCsv to the collector',
 						total: -amount,
 						type: 'taxPaid',
 					});
