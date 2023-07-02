@@ -32,6 +32,20 @@
 	$: rowsSliced = rows.slice(page.offset * page.limit, page.offset * page.limit + page.limit);
 </script>
 
+<div class="flex flex-col md:flex-row items-center justify-end gap-4">
+	{#if sortOptions.length}
+		<div class="max-w-max">
+			<select bind:value={sort} class="select max-w-max ml-2" aria-label="Sort by">
+				{#each sortOptions as [value, text] (value)}
+					<option value="{value}--asc">↑ {text}</option>
+					<option value="{value}--desc">↓ {text}</option>
+				{/each}
+			</select>
+		</div>
+	{/if}
+	<Paginator bind:settings={page} select="select" />
+</div>
+
 <table class="table table-compact table-hover my-6" class:interactive>
 	<thead>
 		<tr>
@@ -56,23 +70,6 @@
 		{/each}
 	</tbody>
 </table>
-
-<div class="flex justify-end">
-	{#if sortOptions.length}
-		<div class="w-[50%]">
-			<label>
-				Sort by
-				<select bind:value={sort} class="select max-w-[200px] ml-2">
-					{#each sortOptions as [value, text] (value)}
-						<option value="{value}--asc">↑ {text}</option>
-						<option value="{value}--desc">↓ {text}</option>
-					{/each}
-				</select>
-			</label>
-		</div>
-	{/if}
-	<Paginator bind:settings={page} class="w-[50%]" />
-</div>
 
 <style>
 	table.interactive tbody tr:hover {
