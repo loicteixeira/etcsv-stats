@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { RadioGroup, RadioItem } from '@skeletonlabs/skeleton';
 	import Table from '$lib/components/Table.svelte';
 	import { aggregateOrderItemsBySku } from '$lib/entities/orderItem/transforms';
 	import { currencyFormatter } from '$lib/formatters';
@@ -6,6 +7,7 @@
 
 	let rows: any[][] = [];
 	let sort = 'grossAfterDiscount--desc';
+	let grouping: 'sku' | 'variant' = 'sku';
 
 	const columns = [
 		{
@@ -51,8 +53,8 @@
 	$: {
 		const [column, direction] = sort.split('--');
 		const directionModifier = direction == 'asc' ? 1 : -1;
-		const orderItemsBySku = aggregateOrderItemsBySku($orderItems);
-		rows = Object.entries(orderItemsBySku)
+		const groupedOrderItems = aggregateOrderItemsBySku($orderItems);
+		rows = Object.entries(groupedOrderItems)
 			.map(([key, value]) => ({ sku: key, ...value }))
 			.sort((a, b) => {
 				let comp;
@@ -106,4 +108,13 @@
 	}
 </script>
 
-<Table {columns} {rows} bind:sort />
+<Table {columns} {rows} bind:sort>
+	<slot />
+	<svelte:fragment slot="extra-actions">
+		<slot name="extra-actions" />
+		<RadioGroup>
+			<RadioItem bind:group={grouping} name="grouping" value="sku">By SKU</RadioItem>
+			<RadioItem bind:group={grouping} name="grouping" value="variant">By SKU & Variant</RadioItem>
+		</RadioGroup>
+	</svelte:fragment>
+</Table>

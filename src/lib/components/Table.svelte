@@ -32,18 +32,24 @@
 	$: rowsSliced = rows.slice(page.offset * page.limit, page.offset * page.limit + page.limit);
 </script>
 
-<div class="flex flex-col md:flex-row items-center justify-end gap-4">
-	{#if sortOptions.length}
-		<div class="max-w-max">
-			<select bind:value={sort} class="select max-w-max ml-2" aria-label="Sort by">
-				{#each sortOptions as [value, text] (value)}
-					<option value="{value}--asc">↑ {text}</option>
-					<option value="{value}--desc">↓ {text}</option>
-				{/each}
-			</select>
-		</div>
-	{/if}
-	<Paginator bind:settings={page} select="select" />
+<div class="flex flex-col md:flex-row items-center justify-between gap-4">
+	<div class="self-start"><slot /></div>
+
+	<div class="flex flex-col md:flex-row items-center justify-end gap-4">
+		<slot name="extra-actions" />
+
+		{#if sortOptions.length}
+			<div class="max-w-max">
+				<select bind:value={sort} class="select max-w-max" aria-label="Sort by">
+					{#each sortOptions as [value, text] (value)}
+						<option value="{value}--asc">↑ {text}</option>
+						<option value="{value}--desc">↓ {text}</option>
+					{/each}
+				</select>
+			</div>
+		{/if}
+		<Paginator bind:settings={page} select="select" />
+	</div>
 </div>
 
 <table class="table table-compact table-hover my-6" class:interactive>

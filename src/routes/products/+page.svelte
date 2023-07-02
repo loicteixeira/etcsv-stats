@@ -10,8 +10,9 @@
 		...
 	</div>
 	<div class="mb-6">
-		<h2 class="mb-3 h2">Details (by SKU)</h2>
-		<ProductTable />
+		<ProductTable>
+			<h2 class="mb-3 h2">Details</h2>
+		</ProductTable>
 	</div>
 {:else}
 	<div class="grid place-items-center mt-12">

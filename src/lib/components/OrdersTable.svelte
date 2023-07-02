@@ -71,4 +71,7 @@
 	}
 </script>
 
-<Table {columns} {rows} bind:sort on:selected {interactive} />
+<Table {columns} {rows} bind:sort on:selected {interactive}>
+	<slot />
+	<slot name="extra-actions" slot="extra-actions" />
+</Table>

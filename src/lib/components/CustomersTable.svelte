@@ -57,4 +57,7 @@
 	}
 </script>
 
-<Table {columns} {rows} bind:sort />
+<Table {columns} {rows} bind:sort>
+	<slot />
+	<slot name="extra-actions" slot="extra-actions" />
+</Table>

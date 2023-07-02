@@ -11,8 +11,9 @@
 		<CustomersStatsSummary />
 	</div>
 	<div class="mb-6">
-		<h2 class="mb-3 h2">Top Repeating</h2>
-		<CustomersTable />
+		<CustomersTable>
+			<h2 class="mb-3 h2">Top Repeating</h2>
+		</CustomersTable>
 	</div>
 {:else}
 	<div class="grid place-items-center mt-12">

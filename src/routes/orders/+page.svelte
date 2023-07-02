@@ -25,8 +25,9 @@
 		<!-- Orders Count ; Orders Gross ; Orders Net -->
 	</div>
 	<div class="mb-6">
-		<h2 class="mb-3 h2">Details</h2>
-		<OrdersTable on:selected={onSelected} interactive={true} />
+		<OrdersTable on:selected={onSelected} interactive={true}>
+			<h2 class="mb-3 h2">Details</h2>
+		</OrdersTable>
 	</div>
 
 	<Drawer position="right" width="w-[75%]">
