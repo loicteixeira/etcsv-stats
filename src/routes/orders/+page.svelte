@@ -20,20 +20,20 @@
 </script>
 
 {#if $orders.length}
-	<h1 class="h1 mb-6">Orders</h1>
-	<div class="mb-6">
+	<h1 class="h1 mb-12">Orders</h1>
+	<div class="mb-12">
 		<h2 class="mb-3 h2">Summary</h2>
 		...
 		<!-- Orders Count ; Orders Gross ; Orders Net -->
 	</div>
-	<div class="mb-6">
+	<div class="mb-12">
 		<OrdersTable on:selected={onSelected} interactive={true}>
 			<h2 class="mb-3 h2">Details</h2>
 		</OrdersTable>
 	</div>
 
-	<Drawer position="right" width="w-[75%]">
-		<div class="h-full p-6 bg-surface-600">
+	<Drawer position="right" width="w-[75%]" bgDrawer="bg-surface-600">
+		<div class="p-6">
 			<button
 				class="mb-12 anchor"
 				on:click={() => {
@@ -58,9 +58,9 @@
 				</button>
 			{/if}
 
-			<h3 class="h1 mb-6">Order #{$drawerStore.id}</h3>
+			<h3 class="h1 mb-12">Order #{$drawerStore.id}</h3>
 
-			<div class="flex justify-end items-center gap-12 mb-6 px-4">
+			<div class="flex justify-end items-center gap-12 mb-12 px-4">
 				<label class="flex items-center space-x-2">
 					<input class="checkbox" type="checkbox" bind:checked={collapseOrderLines} />
 					<p>Collapse Order Lines</p>
