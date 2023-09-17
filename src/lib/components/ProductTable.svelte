@@ -18,11 +18,6 @@
 			sortable: true,
 		},
 		{
-			id: 'name',
-			text: 'Product Name',
-			sortable: true,
-		},
-		{
 			id: 'quantity',
 			text: 'Quantity',
 			headerClasses: 'table-cell-fit',
@@ -45,7 +40,7 @@
 		},
 		{
 			id: 'grossAfterDiscount',
-			text: 'Gross Aft Discounts',
+			text: 'Gross After Discounts',
 			headerClasses: 'table-cell-fit',
 			cellClasses: 'text-right',
 			sortable: true,
@@ -106,11 +101,10 @@
 				}) => {
 					const joinedVariations = Object.entries(variations)
 						.map(([key, value]) => `${key}: ${value}`)
-						.join(', ');
-					const title = joinedVariations ? `${sku} (${joinedVariations})` : sku;
+						.sort();
+					const title = { description: sku, extraDescription: itemName, badges: joinedVariations };
 					return [
 						title,
-						itemName,
 						totalQuantity,
 						currencyFormatter(totalGrossBeforeDiscounts),
 						currencyFormatter(totalDiscounts),

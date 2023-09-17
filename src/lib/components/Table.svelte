@@ -77,7 +77,27 @@
 				}}
 			>
 				{#each row as cell, idx (idx)}
-					<td class={columns[idx].cellClasses}>{cell}</td>
+					{#if typeof cell === 'object'}
+						<td class="flex items-center gap-4 justify-between {columns[idx].cellClasses || ''}">
+							<span>
+								{cell.description}
+								{#if cell.extraDescription}
+									<span class="text-xs italic text-secondary-300">{cell.extraDescription}</span>
+								{/if}
+							</span>
+							{#if cell.badges}
+								<span class="flex items-end gap-2 flex-col">
+									{#each cell.badges as badge}
+										<span class="badge variant-soft-tertiary">{badge}</span>
+									{/each}
+								</span>
+							{/if}
+						</td>
+					{:else}
+						<td class={columns[idx].cellClasses || ''}>
+							{cell}
+						</td>
+					{/if}
 				{/each}
 			</tr>
 		{/each}

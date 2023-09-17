@@ -30,14 +30,14 @@
 						<span>{line.description}</span>
 					</td>
 				{:else}
-					<td class="flex items-center gap-2 justify-between">
+					<td class="flex items-center gap-4 justify-between">
 						<span>
 							{line.description}
 							{#if line.extraDescription}
 								<span class="text-xs italic text-secondary-300">{line.extraDescription}</span>
 							{/if}
 						</span>
-						{#if line.badge}<span class="badge variant-soft">{line.badge}</span>{/if}
+						{#if line.badge}<span class="badge variant-soft-tertiary">{line.badge}</span>{/if}
 					</td>
 
 					<td class="text-right">
