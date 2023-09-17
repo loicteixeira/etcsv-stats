@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Drawer, drawerStore } from '@skeletonlabs/skeleton';
+	import { Drawer, getDrawerStore } from '@skeletonlabs/skeleton';
 	import OrderDetails from '$lib/components/OrderDetails.svelte';
 	import OrdersTable from '$lib/components/OrdersTable.svelte';
 	import { orders } from '$lib/stores';
@@ -7,6 +7,8 @@
 
 	let collapseOrderLines = false;
 	let collapseFeesLines = true;
+
+	const drawerStore = getDrawerStore();
 
 	function onSelected(event: CustomEvent) {
 		const selectedOrderID = event.detail[0];

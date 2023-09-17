@@ -24,8 +24,8 @@
 	let sortOptions: [string, string][] = [];
 	$: sortOptions = columns.filter(({ sortable }) => sortable).map(({ id, text }) => [id, text]);
 
-	let page = {
-		offset: 0,
+	let paginationSettings = {
+		page: 0,
 		limit: pageSize > rows.length ? rows.length : pageSize,
 		size: rows.length,
 		amounts: [5, 10, 50, 100, rows.length, pageSize]
@@ -33,7 +33,10 @@
 			.filter((n) => n <= rows.length),
 	} satisfies PaginationSettings;
 
-	$: rowsSliced = rows.slice(page.offset * page.limit, page.offset * page.limit + page.limit);
+	$: rowsSliced = rows.slice(
+		paginationSettings.page * paginationSettings.limit,
+		paginationSettings.page * paginationSettings.limit + paginationSettings.limit,
+	);
 </script>
 
 <div class="flex flex-col md:flex-row items-center justify-between gap-4">
@@ -52,7 +55,7 @@
 				</select>
 			</div>
 		{/if}
-		<Paginator bind:settings={page} select="select" />
+		<Paginator bind:settings={paginationSettings} select="select" />
 	</div>
 </div>
 
