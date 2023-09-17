@@ -1,5 +1,6 @@
 import { join } from 'path';
 import type { Config } from 'tailwindcss';
+import forms from '@tailwindcss/forms';
 import { skeleton } from '@skeletonlabs/tw-plugin';
 
 const config = {
@@ -12,7 +13,8 @@ const config = {
 		extend: {},
 	},
 	plugins: [
-		// Append the Skeleton plugin (after other plugins)
+		forms,
+		// Should be last
 		skeleton({
 			themes: { preset: ['skeleton'] },
 		}),
