@@ -38,7 +38,7 @@
 				However, it cannot be guaranteed that these numbers are 100% accurate. In cases where your shop
 				is based internationally, your listing fees may fluctuate based on your local currency’s conversion
 				rate to USD, and EtCsv Stats does not account for these fluctuations.<br />
-				Additionally, EtCsv themselves may change their fees mid-year, which this tool may not have updated
+				Additionally, Etsy themselves may change their fees mid-year, which this tool may not have updated
 				for at the time you use it. There may also be differences in how sums are rounded. EtCsv Stats
 				is not liable for your use of the data displays generated from your uploaded files.
 			</div>
@@ -46,7 +46,7 @@
 	</div>
 	<h2 class="h2">How does it work?</h2>
 	<p>
-		You will download files provided by EtCsv for your EtCsv shop, then
+		You will download files provided by Etsy for your Etsy shop, then
 		<a href="/files" class="anchor">upload them</a>
 		into EtCsv Stats. EtCsv Stats will then generate different views for this data to help you better
 		understand your fees, your top-selling products, and your top-buying customers. Refer to the guide
@@ -111,10 +111,7 @@
 	<h2 class="h2">Is my data safe?</h2>
 	<p>
 		EtCsv Stats does not save your uploaded files to any server;<br />
-		However, the data in your uploaded files will be scanned during your user session.<br />
-		It’s advised to use EtCsv Stats (or any service involving file transfers, really!) on a secured network
-		(in other words, don’t upload or download stuff when you’re using the public WiFi at the local coffee
-		shop).
+		However, the data in your uploaded files will be scanned during your user session.
 	</p>
 	<p>
 		Your personal data is never collected or used in any way while using EtCsv Stats. You don’t need
