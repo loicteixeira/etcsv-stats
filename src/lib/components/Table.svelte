@@ -28,7 +28,7 @@
 		page: 0,
 		limit: pageSize > rows.length ? rows.length : pageSize,
 		size: rows.length,
-		amounts: [5, 10, 50, 100, rows.length, pageSize]
+		amounts: [...new Set([5, 10, 50, 100, rows.length, pageSize])]
 			.sort((a, b) => a - b)
 			.filter((n) => n <= rows.length),
 	} satisfies PaginationSettings;
