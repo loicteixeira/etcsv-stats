@@ -5,13 +5,12 @@ import type { TFileInfo } from '$lib/entities/file/model';
 import type { TStatementCsvLine } from '$lib/entities/statement/model';
 import { postProcessStatementCsvLine } from './entities/statement/transforms';
 import { computeOrderDetails, postProcessOrderCsvLine } from './entities/order/transforms';
-import { fakeOrderCSVs, fakeOrderItemCSVs, fakeStatementCSVs } from './mocks'; // TODO: Remove
 import { getCustomers } from './entities/customer/transforms';
 
 // Base: CSV files
-export const orderItemCSVs = writable<TFileInfo<TOrderItemCsvLine>[]>(fakeOrderItemCSVs);
-export const orderCSVs = writable<TFileInfo<TOrderCsvLine>[]>(fakeOrderCSVs);
-export const statementCSVs = writable<TFileInfo<TStatementCsvLine>[]>(fakeStatementCSVs);
+export const orderItemCSVs = writable<TFileInfo<TOrderItemCsvLine>[]>([]);
+export const orderCSVs = writable<TFileInfo<TOrderCsvLine>[]>([]);
+export const statementCSVs = writable<TFileInfo<TStatementCsvLine>[]>([]);
 
 // Derived: CSV lines
 export const orderItemCSVLines = derived(orderItemCSVs, ($orderItemCSVs) =>

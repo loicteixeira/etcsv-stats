@@ -8,8 +8,6 @@
 
 <div class="mb-6">
 	<h2 class="mb-3 h2">Orders CSVs</h2>
-	<p>Those files contain...</p>
-	<p>You can find them...</p>
 	<CSVFileDropzone name="order-csv" files={orderCSVs} recordSchema={orderCsvLineSchema} />
 </div>
 

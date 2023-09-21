@@ -22,11 +22,6 @@
 {#if $orders.length}
 	<h1 class="h1 mb-12">Orders</h1>
 	<div class="mb-12">
-		<h2 class="mb-3 h2">Summary</h2>
-		...
-		<!-- Orders Count ; Orders Gross ; Orders Net -->
-	</div>
-	<div class="mb-12">
 		<OrdersTable on:selected={onSelected} interactive={true}>
 			<h2 class="mb-3 h2">Details</h2>
 		</OrdersTable>

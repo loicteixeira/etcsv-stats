@@ -117,8 +117,4 @@
 		Your personal data is never collected or used in any way while using EtCsv Stats. You don’t need
 		to create an account or log in to use it.
 	</p>
-	<p>
-		You can use the demo files provided if you’d like to understand how EtCsv Stats works before
-		trying it out for your own files.
-	</p>
 </div>

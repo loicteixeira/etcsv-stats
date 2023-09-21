@@ -6,10 +6,6 @@
 {#if $orderItems.length}
 	<h1 class="h1 mb-12">Products</h1>
 	<div class="mb-12">
-		<h2 class="mb-3 h2">Summary</h2>
-		...
-	</div>
-	<div class="mb-12">
 		<ProductTable>
 			<h2 class="mb-3 h2">Details</h2>
 		</ProductTable>
