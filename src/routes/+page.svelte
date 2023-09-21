@@ -9,9 +9,9 @@
 	<p>
 		EtCsv Stats is an
 		<a href="https://github.com/loicteixeira/etcsv-stats" class="anchor">open-source tool</a>
-		designed to help you make sense of your sales on EtCsv. You can review associated fees and taxes
-		on any order, understand how many products sold, see your actual net income after fees and taxes,
-		and see who your top customers are by number of orders and total spend.
+		designed to help you make sense of your sales on Etsy. You can review associated fees and taxes on
+		any order, understand how many products sold, see your actual net income after fees and taxes, and
+		see who your top customers are by number of orders and total spend.
 	</p>
 	<div class="relative rounded-xl bg-surface-700 p-4 pr-16">
 		<div class="flex items-start space-x-2.5">
@@ -19,11 +19,11 @@
 
 			<div class="mt-1 text-text">
 				<div class="font-semibold mb-2">
-					EtCsv Stats is NOT affiliated with, nor endorsed by, EtCsv, Inc.
+					EtCsv Stats is NOT affiliated with, nor endorsed by, Etsy, Inc.
 				</div>
 
 				EtCsv Stats is an open source tool made by an independent programmer to help indie sellers
-				make sense of their commercial activity on EtCsv.
+				make sense of their commercial activity on Etsy.
 			</div>
 		</div>
 	</div>
@@ -34,7 +34,7 @@
 			<div class="mt-1 text-text">
 				<div class="font-semibold mb-2">EtCsv Stats is NOT an accounting software!</div>
 
-				EtCsv stats will generate views based on files you upload from EtCsv;<br />
+				EtCsv stats will generate views based on files you upload from Etsy;<br />
 				However, it cannot be guaranteed that these numbers are 100% accurate. In cases where your shop
 				is based internationally, your listing fees may fluctuate based on your local currency’s conversion
 				rate to USD, and EtCsv Stats does not account for these fluctuations.<br />
@@ -57,7 +57,7 @@
 
 	<ul>
 		<li class="flex items-start gap-3">
-			<span>✅</span> Seeing how much in EtCsv fees and associated taxes on fees is actually taken out
+			<span>✅</span> Seeing how much in Etsy fees and associated taxes on fees is actually taken out
 			of each order
 		</li>
 		<li class="flex items-start gap-3">
@@ -72,7 +72,7 @@
 			<span>✅</span> Seeing which customers placed the most orders
 		</li>
 		<li class="flex items-start gap-3">
-			<span>✅</span>Seeing which customers had the highest spend based on net income after EtCsv
+			<span>✅</span>Seeing which customers had the highest spend based on net income after Etsy
 			fees and associated taxes on fees
 		</li>
 	</ul>
@@ -106,7 +106,7 @@
 		>
 			Listing Fees
 		</a>
-		as EtCsv shops based in France, then EtCsv Stats should display your data similarly.
+		as Etsy shops based in France, then EtCsv Stats should display your data similarly.
 	</p>
 	<h2 class="h2">Is my data safe?</h2>
 	<p>
