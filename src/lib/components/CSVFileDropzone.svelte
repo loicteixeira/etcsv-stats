@@ -29,7 +29,7 @@
 	}
 </script>
 
-<div class="flex gap-6">
+<div class="flex flex-col sm:flex-row gap-6">
 	<FileDropzone
 		{name}
 		accept=".csv"

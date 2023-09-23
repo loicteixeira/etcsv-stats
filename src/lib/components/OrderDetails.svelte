@@ -16,9 +16,9 @@
 	<thead>
 		<tr>
 			<th>Name</th>
-			<th class="table-cell-fit">Unit Price</th>
-			<th class="table-cell-fit">Quantity</th>
-			<th class="table-cell-fit">Total</th>
+			<th class="text-right lg:text-left lg:table-cell-fit">Unit Price</th>
+			<th class="text-right lg:text-left lg:table-cell-fit">Quantity</th>
+			<th class="text-right lg:text-left lg:table-cell-fit">Total</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -30,13 +30,15 @@
 						<span>{line.description}</span>
 					</td>
 				{:else}
-					<td class="flex items-center gap-4 justify-between">
-						<span>
-							{line.description}
+					<td class="flex flex-col lg:flex-row items-start lg:items-center gap-4 justify-between">
+						<div>
+							<p>{line.description}</p>
 							{#if line.extraDescription}
-								<span class="text-xs italic text-secondary-300">{line.extraDescription}</span>
+								<span class="text-xs italic text-secondary-300 shrink-0"
+									>{line.extraDescription}</span
+								>
 							{/if}
-						</span>
+						</div>
 						{#if line.badge}<span class="badge variant-soft-tertiary">{line.badge}</span>{/if}
 					</td>
 

@@ -11,13 +11,17 @@
 	];
 </script>
 
-<AppBar slotTrail="place-content-end" shadow="drop-shadow-lg">
+<AppBar
+	gridColumns="grid-cols-1 md:grid-cols-[1fr_auto]"
+	slotTrail="place-content-start md:place-content-end"
+	shadow="drop-shadow-lg"
+>
 	<strong class="h2 {$page.route.id === '/' ? currentPageClasses : ''}">
 		<a href="/">EtCsv Stats</a>
 	</strong>
 	<svelte:fragment slot="trail">
 		<nav>
-			<ul class="font-medium flex gap-6">
+			<ul class="font-medium flex flex-col md:flex-row gap-3 md:gap-6">
 				{#each menuLinks as { path, text } (path)}
 					<li class={$page.route.id === path ? currentPageClasses : ''}>
 						<a href={path}>{text}</a>

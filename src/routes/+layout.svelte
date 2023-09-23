@@ -15,7 +15,7 @@
 		<Header />
 	</svelte:fragment>
 
-	<div class="container h-full mx-auto py-6">
+	<div class="h-full mx-6 md:mx-auto md:container py-6">
 		<slot />
 	</div>
 

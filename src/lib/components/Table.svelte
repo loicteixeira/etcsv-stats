@@ -42,7 +42,7 @@
 <div class="flex flex-col md:flex-row items-center justify-between gap-4">
 	<div class="self-start"><slot /></div>
 
-	<div class="flex flex-col md:flex-row items-center justify-end gap-4">
+	<div class="flex flex-col md:flex-row items-center justify-end flex-wrap gap-4">
 		<slot name="extra-actions" />
 
 		{#if sortOptions.length}
@@ -59,7 +59,7 @@
 	</div>
 </div>
 
-<table class="table table-compact table-hover my-6" class:interactive>
+<table class="table table-fixed lg:table-auto table-compact table-hover my-6" class:interactive>
 	<thead>
 		<tr>
 			{#each columns as { id, text, headerClasses } (id)}
@@ -78,15 +78,20 @@
 			>
 				{#each row as cell, idx (idx)}
 					{#if typeof cell === 'object'}
-						<td class="flex items-center gap-4 justify-between {columns[idx].cellClasses || ''}">
-							<span>
-								{cell.description}
+						<td
+							class="flex gap-4 justify-between flex-col lg:flex-row {columns[idx].cellClasses ||
+								''}"
+						>
+							<div class="flex flex-col gap-1">
+								<p class="shrink-0">{cell.description}</p>
 								{#if cell.extraDescription}
-									<span class="text-xs italic text-secondary-300">{cell.extraDescription}</span>
+									<p class="text-left text-xs italic text-secondary-300">
+										{cell.extraDescription}
+									</p>
 								{/if}
-							</span>
+							</div>
 							{#if cell.badges}
-								<span class="flex items-end gap-2 flex-col">
+								<span class="flex items-start lg:items-end gap-2 flex-col">
 									{#each cell.badges as badge}
 										<span class="badge variant-soft-tertiary">{badge}</span>
 									{/each}

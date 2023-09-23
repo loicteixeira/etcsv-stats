@@ -12,7 +12,7 @@
 	const averageOrdersCount = totalOrdersCount / $customers.length;
 </script>
 
-<div class="flex gap-6">
+<div class="flex flex-col md:flex-row flex-wrap gap-6">
 	<div class="card w-[14em]">
 		<header class="card-header text-center min-h-[4em]">Number of<br />Customers</header>
 		<section class="p-4 text-center text-4xl text-primary-500">{$customers.length}</section>

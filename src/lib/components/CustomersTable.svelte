@@ -15,14 +15,14 @@
 		{
 			id: 'count',
 			text: 'Orders Count',
-			headerClasses: 'table-cell-fit',
+			headerClasses: 'text-right lg:text-left lg:table-cell-fit',
 			cellClasses: 'text-right',
 			sortable: true,
 		},
 		{
 			id: 'gross',
 			text: 'Orders Gross Value',
-			headerClasses: 'table-cell-fit',
+			headerClasses: 'text-right lg:text-left lg:table-cell-fit',
 			cellClasses: 'text-right',
 			sortable: true,
 		},
