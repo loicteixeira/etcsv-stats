@@ -10,6 +10,10 @@
 	initializeStores();
 </script>
 
+<svelte:head>
+	<title>EtCsv Stats</title>
+</svelte:head>
+
 <AppShell>
 	<svelte:fragment slot="header">
 		<Header />
