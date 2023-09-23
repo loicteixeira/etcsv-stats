@@ -45,7 +45,7 @@
 		<svelte:fragment slot="meta">CSV allowed</svelte:fragment>
 	</FileDropzone>
 
-	{#if $files}
+	{#if $files.length}
 		<ul class="list my-3">
 			{#each $files as { filename, records, errors } (filename)}
 				<li>
