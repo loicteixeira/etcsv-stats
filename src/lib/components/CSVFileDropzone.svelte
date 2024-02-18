@@ -6,7 +6,7 @@
 	import Icon from '@iconify/svelte';
 	import fileDescription from '@iconify/icons-tabler/file-description';
 	import trashX from '@iconify/icons-tabler/trash-x';
-	import { readCSV } from '$lib/files';
+	import { readCSVFile } from '$lib/files';
 	import { nGetText } from '$lib/translations';
 
 	export let name: string;
@@ -18,7 +18,7 @@
 		if (!target || !target.files) return;
 
 		Array.from(target.files).forEach(async (fileHandle) => {
-			const { errors, records } = await readCSV(fileHandle, recordSchema);
+			const { errors, records } = await readCSVFile(fileHandle, recordSchema);
 			const fileInfo = {
 				fileHandle: fileHandle,
 				filename: fileHandle.name, // TODO: Bail or update if duplicated name?

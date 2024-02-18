@@ -1,7 +1,7 @@
 <script lang="ts">
 	import '../app.postcss';
 
-	import { AppShell } from '@skeletonlabs/skeleton';
+	import { AppShell, Toast } from '@skeletonlabs/skeleton';
 	import Header from '$lib/components/Header.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 
@@ -26,4 +26,6 @@
 	<svelte:fragment slot="pageFooter">
 		<Footer />
 	</svelte:fragment>
+
+	<Toast position="tr" />
 </AppShell>

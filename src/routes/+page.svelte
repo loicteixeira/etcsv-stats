@@ -1,6 +1,27 @@
 <script lang="ts">
 	import Icon from '@iconify/svelte';
 	import alert16 from '@iconify/icons-tabler/alert-circle';
+	import { loadDemoData } from '$lib/demo/load';
+	import { getToastStore, type ToastSettings } from '@skeletonlabs/skeleton';
+	import { goto } from '$app/navigation';
+
+	const toastStore = getToastStore();
+
+	async function onLoadDemoData() {
+		await loadDemoData();
+
+		const toast: ToastSettings = {
+			message: 'Demo data successfully loaded',
+			background: 'variant-filled-success',
+			action: {
+				label: 'See the demo products',
+				response: () => {
+					goto('/products');
+				},
+			},
+		};
+		toastStore.trigger(toast);
+	}
 </script>
 
 <div class="flex flex-col gap-6 mt-12 max-w-prose mx-auto">
@@ -48,9 +69,10 @@
 	<p>
 		You will download files provided by Etsy for your Etsy shop, then
 		<a href="/files" class="anchor">upload them</a>
-		into EtCsv Stats. EtCsv Stats will then generate different views for this data to help you better
-		understand your fees, your top-selling products, and your top-buying customers. Refer to the guide
-		on the upload page to learn which files you need from EtCsv and how to download them.
+		into EtCsv Stats (or <button on:click={onLoadDemoData} class="anchor">load demo files</button>).
+		EtCsv Stats will then generate different views for this data to help you better understand your
+		fees, your top-selling products, and your top-buying customers. Refer to the guide on the upload
+		page to learn which files you need from EtCsv and how to download them.
 	</p>
 	<h2 class="h2">Why should I use EtCsv Stats?</h2>
 	<p>Here’s some things that EtCsv Stats is ideal for:</p>

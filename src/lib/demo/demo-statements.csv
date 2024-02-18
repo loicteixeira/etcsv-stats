@@ -1,0 +1,733 @@
+Date,Type,Title,Info,Net
+"December 14, 2022",VAT,VAT: Regulatory Operating fee,,-€0.01
+"December 14, 2022",VAT,VAT: shipping_transaction,,-€0.04
+"December 14, 2022",VAT,VAT: transaction,transaction: 0000,-€0.20
+"December 14, 2022",VAT,VAT: Processing Fee,order: 2236252181,-€0.20
+"December 14, 2022",Fee,Regulatory Operating fee,order: 2236252181,-€0.07
+"December 14, 2022",Fee,Transaction fee: Item,order: 2236252181,-€0.18
+"December 14, 2022",Fee,Transaction fee: Item,order: 2236252181,-€0.98
+"December 14, 2022",Fee,Processing fee,order: 2236252181,-€1.01
+"December 14, 2022",VAT,VAT: auto-renew sold ,auto-renew sold : 0000,-€0.04
+"December 14, 2022",Fee,Listing fee,listing: 0000,-€0.19
+"December 14, 2022",VAT,VAT: Regulatory Operating fee,,-€0.02
+"December 14, 2022",VAT,VAT: shipping_transaction,,-€0.06
+"December 14, 2022",VAT,VAT: transaction,transaction: 0000,-€0.21
+"December 14, 2022",VAT,VAT: Processing Fee,order: 0000,-€0.22
+"December 14, 2022",Fee,Regulatory Operating fee,order: 0000,-€0.08
+"December 14, 2022",Fee,Processing fee,order: 0000,-€1.12
+"December 14, 2022",Fee,Transaction fee: Item,order: 0000,-€0.29
+"December 14, 2022",Fee,Transaction fee: Item,order: 0000,-€1.04
+"December 14, 2022",VAT,VAT: auto-renew sold ,auto-renew sold : 0000,-€0.04
+"December 14, 2022",Fee,Listing fee,listing: 0000,-€0.19
+"December 12, 2022",VAT,VAT: Regulatory Operating fee,,-€0.02
+"December 12, 2022",VAT,VAT: transaction,transaction: 0000,-€0.21
+"December 12, 2022",VAT,VAT: shipping_transaction,,-€0.06
+"December 12, 2022",VAT,VAT: Processing Fee,order: 2711326568,-€0.23
+"December 12, 2022",Fee,Regulatory Operating fee,order: 2711326568,-€0.08
+"December 12, 2022",Fee,Transaction fee: Item,order: 2711326568,-€1.04
+"December 12, 2022",Fee,Processing fee,order: 2711326568,-€1.16
+"December 12, 2022",Fee,Transaction fee: Item,order: 2711326568,-€0.29
+"December 12, 2022",VAT,VAT: auto-renew sold ,auto-renew sold : 0000,-€0.04
+"December 12, 2022",Fee,Listing fee,listing: 0000,-€0.19
+"December 6, 2022",VAT,VAT: transaction,transaction: 0000,-€0.39
+"December 6, 2022",VAT,VAT: Regulatory Operating fee,,-€0.03
+"December 6, 2022",VAT,VAT: shipping_transaction,,-€0.11
+"December 6, 2022",VAT,VAT: Processing Fee,order: 2986146440,-€0.37
+"December 6, 2022",Fee,Transaction fee: Item,order: 2986146440,-€1.95
+"December 6, 2022",Fee,Processing fee,order: 2986146440,-€1.84
+"December 6, 2022",Fee,Regulatory Operating fee,order: 2986146440,-€0.15
+"December 6, 2022",Fee,Transaction fee: Item,order: 2986146440,-€0.55
+"December 6, 2022",VAT,VAT: auto-renew sold ,auto-renew sold : 0000,-€0.04
+"December 6, 2022",Fee,Listing fee,listing: 0000,-€0.19
+"December 6, 2022",VAT,VAT: Regulatory Operating fee,,-€0.02
+"December 6, 2022",VAT,VAT: shipping_transaction,,-€0.06
+"December 6, 2022",VAT,VAT: transaction,transaction: 0000,-€0.21
+"December 6, 2022",VAT,VAT: Processing Fee,order: 2237519472,-€0.24
+"December 6, 2022",Fee,Regulatory Operating fee,order: 2237519472,-€0.08
+"December 6, 2022",Fee,Transaction fee: Item,order: 2237519472,-€0.29
+"December 6, 2022",Fee,Transaction fee: Item,order: 2237519472,-€1.04
+"December 6, 2022",Fee,Processing fee,order: 2237519472,-€1.18
+"December 6, 2022",VAT,VAT: auto-renew sold ,auto-renew sold : 0000,-€0.04
+"December 6, 2022",Fee,Listing fee,listing: 0000,-€0.19
+"December 2, 2022",VAT,VAT: Regulatory Operating fee,,-€0.02
+"December 2, 2022",VAT,VAT: transaction,transaction: 0000,-€0.27
+"December 2, 2022",VAT,VAT: shipping_transaction,,-€0.06
+"December 2, 2022",VAT,VAT: Processing Fee,order: 2897301026,-€0.28
+"December 2, 2022",Fee,Regulatory Operating fee,order: 2897301026,-€0.10
+"December 2, 2022",Fee,Processing fee,order: 2897301026,-€1.41
+"December 2, 2022",Fee,Transaction fee: Item,order: 2897301026,-€0.29
+"December 2, 2022",Fee,Transaction fee: Item,order: 2897301026,-€1.37
+"December 2, 2022",VAT,VAT: auto-renew sold ,auto-renew sold : 0000,-€0.04
+"December 2, 2022",Fee,Listing fee,listing: 0000,-€0.19
+"November 21, 2022",VAT,VAT: Regulatory Operating fee,,-€0.02
+"November 21, 2022",VAT,VAT: shipping_transaction,,-€0.06
+"November 21, 2022",VAT,VAT: transaction,transaction: 0000,-€0.27
+"November 21, 2022",VAT,VAT: Processing Fee,order: 2738910492,-€0.28
+"November 21, 2022",Fee,Regulatory Operating fee,order: 2738910492,-€0.10
+"November 21, 2022",Fee,Transaction fee: Item,order: 2738910492,-€0.29
+"November 21, 2022",Fee,Transaction fee: Item,order: 2738910492,-€1.37
+"November 21, 2022",Fee,Processing fee,order: 2738910492,-€1.40
+"November 21, 2022",VAT,VAT: auto-renew sold ,auto-renew sold : 0000,-€0.04
+"November 21, 2022",Fee,Listing fee,listing: 0000,-€0.20
+"November 21, 2022",VAT,VAT: transaction,transaction: 0000,-€0.26
+"November 21, 2022",VAT,VAT: Regulatory Operating fee,,-€0.02
+"November 21, 2022",VAT,VAT: shipping_transaction,,-€0.06
+"November 21, 2022",VAT,VAT: Processing Fee,order: 2868029948,-€0.26
+"November 21, 2022",Fee,Regulatory Operating fee,order: 2868029948,-€0.10
+"November 21, 2022",Fee,Transaction fee: Item,order: 2868029948,-€1.30
+"November 21, 2022",Fee,Transaction fee: Item,order: 2868029948,-€0.29
+"November 21, 2022",Fee,Processing fee,order: 2868029948,-€1.28
+"November 21, 2022",VAT,VAT: auto-renew sold ,auto-renew sold : 0000,-€0.04
+"November 21, 2022",Fee,Listing fee,listing: 0000,-€0.20
+"November 21, 2022",VAT,VAT: shipping_transaction,,-€0.05
+"November 21, 2022",VAT,VAT: Regulatory Operating fee,,-€0.02
+"November 21, 2022",VAT,VAT: transaction,transaction: 0000,-€0.22
+"November 21, 2022",VAT,VAT: Processing Fee,order: 2813415112,-€0.23
+"November 21, 2022",Fee,Transaction fee: Item,order: 2813415112,-€0.23
+"November 21, 2022",Fee,Regulatory Operating fee,order: 2813415112,-€0.08
+"November 21, 2022",Fee,Transaction fee: Item,order: 2813415112,-€1.11
+"November 21, 2022",Fee,Processing fee,order: 2813415112,-€1.17
+"November 21, 2022",VAT,VAT: auto-renew sold ,auto-renew sold : 0000,-€0.04
+"November 21, 2022",Fee,Listing fee,listing: 0000,-€0.19
+"November 14, 2022",VAT,VAT: shipping_transaction,,-€0.05
+"November 14, 2022",VAT,VAT: Regulatory Operating fee,,-€0.03
+"November 14, 2022",VAT,VAT: transaction,transaction: 0000,-€0.40
+"November 14, 2022",VAT,VAT: Processing Fee,order: 2021477240,-€0.34
+"November 14, 2022",Fee,Regulatory Operating fee,order: 2021477240,-€0.14
+"November 14, 2022",Fee,Transaction fee: Item,order: 2021477240,-€0.27
+"November 14, 2022",Fee,Transaction fee: Item,order: 2021477240,-€2.02
+"November 14, 2022",Fee,Processing fee,order: 2021477240,-€1.71
+"November 14, 2022",VAT,VAT: auto-renew sold ,auto-renew sold : 0000,-€0.04
+"November 14, 2022",Fee,Listing fee,listing: 0000,-€0.19
+"November 10, 2022",VAT,VAT: Regulatory Operating fee,,-€0.03
+"November 10, 2022",VAT,VAT: transaction,transaction: 0000,-€0.44
+"November 10, 2022",VAT,VAT: shipping_transaction,,-€0.05
+"November 10, 2022",VAT,VAT: Processing Fee,order: 2785691500,-€0.38
+"November 10, 2022",Fee,Regulatory Operating fee,order: 2785691500,-€0.15
+"November 10, 2022",Fee,Transaction fee: Item,order: 2785691500,-€2.21
+"November 10, 2022",Fee,Processing fee,order: 2785691500,-€1.89
+"November 10, 2022",Fee,Transaction fee: Item,order: 2785691500,-€0.23
+"November 10, 2022",VAT,VAT: auto-renew sold ,auto-renew sold : 0000,-€0.04
+"November 10, 2022",VAT,VAT: multi-quantity,multi-quantity: 0000,-€0.04
+"November 10, 2022",Fee,Listing fee,listing: 0000,-€0.20
+"November 10, 2022",Fee,Listing fee,listing: 0000,-€0.20
+"November 10, 2022",VAT,VAT: Regulatory Operating fee,,-€0.01
+"November 10, 2022",VAT,VAT: shipping_transaction,,-€0.04
+"November 10, 2022",VAT,VAT: transaction,transaction: 0000,-€0.20
+"November 10, 2022",VAT,VAT: Processing Fee,order: 2185424338,-€0.20
+"November 10, 2022",Fee,Regulatory Operating fee,order: 2185424338,-€0.07
+"November 10, 2022",Fee,Transaction fee: Item,order: 2185424338,-€0.18
+"November 10, 2022",Fee,Transaction fee: Item,order: 2185424338,-€0.98
+"November 10, 2022",Fee,Processing fee,order: 2185424338,-€1.01
+"November 10, 2022",VAT,VAT: auto-renew sold ,auto-renew sold : 0000,-€0.04
+"November 10, 2022",Fee,Listing fee,listing: 0000,-€0.20
+"November 1, 2022",VAT,VAT: Regulatory Operating fee,,-€0.05
+"November 1, 2022",VAT,VAT: shipping_transaction,,-€0.17
+"November 1, 2022",VAT,VAT: transaction,transaction: 0000,-€0.21
+"November 1, 2022",VAT,VAT: transaction,transaction: 0000,-€0.39
+"November 1, 2022",VAT,VAT: Processing Fee,order: 2141388692,-€0.56
+"November 1, 2022",Fee,Regulatory Operating fee,order: 2141388692,-€0.24
+"November 1, 2022",Fee,Transaction fee: Item,order: 2141388692,-€0.85
+"November 1, 2022",Fee,Transaction fee: Item,order: 2141388692,-€1.04
+"November 1, 2022",Fee,Processing fee,order: 2141388692,-€2.79
+"November 1, 2022",Fee,Transaction fee: Item,order: 2141388692,-€1.95
+"November 1, 2022",VAT,VAT: auto-renew sold ,auto-renew sold : 0000,-€0.04
+"November 1, 2022",VAT,VAT: auto-renew sold ,auto-renew sold : 0000,-€0.04
+"November 1, 2022",Fee,Listing fee,listing: 0000,-€0.20
+"November 1, 2022",Fee,Listing fee,listing: 0000,-€0.20
+"October 29, 2022",VAT,VAT: transaction,transaction: 0000,-€0.26
+"October 29, 2022",VAT,VAT: Regulatory Operating fee,,-€0.02
+"October 29, 2022",VAT,VAT: shipping_transaction,,-€0.06
+"October 29, 2022",VAT,VAT: Processing Fee,order: 2061954745,-€0.26
+"October 29, 2022",Fee,Regulatory Operating fee,order: 2061954745,-€0.10
+"October 29, 2022",Fee,Transaction fee: Item,order: 2061954745,-€0.29
+"October 29, 2022",Fee,Transaction fee: Item,order: 2061954745,-€1.30
+"October 29, 2022",Fee,Processing fee,order: 2061954745,-€1.28
+"October 29, 2022",VAT,VAT: auto-renew sold ,auto-renew sold : 0000,-€0.04
+"October 29, 2022",Fee,Listing fee,listing: 0000,-€0.20
+"October 25, 2022",VAT,VAT: Regulatory Operating fee,,-€0.02
+"October 25, 2022",VAT,VAT: shipping_transaction,,-€0.04
+"October 25, 2022",VAT,VAT: transaction,transaction: 0000,-€0.26
+"October 25, 2022",VAT,VAT: Processing Fee,order: 2966170608,-€0.24
+"October 25, 2022",Fee,Regulatory Operating fee,order: 2966170608,-€0.09
+"October 25, 2022",Fee,Transaction fee: Item,order: 2966170608,-€0.18
+"October 25, 2022",Fee,Transaction fee: Item,order: 2966170608,-€1.30
+"October 25, 2022",Fee,Processing fee,order: 2966170608,-€1.21
+"October 25, 2022",VAT,VAT: auto-renew sold ,auto-renew sold : 0000,-€0.04
+"October 25, 2022",Fee,Listing fee,listing: 0000,-€0.20
+"October 19, 2022",VAT,VAT: shipping_transaction,,-€0.12
+"October 19, 2022",VAT,VAT: Regulatory Operating fee,,-€0.04
+"October 19, 2022",VAT,VAT: transaction,transaction: 0000,-€0.46
+"October 19, 2022",VAT,VAT: Processing Fee,order: 2151630822,-€0.42
+"October 19, 2022",Fee,Transaction fee: Item,order: 2151630822,-€0.59
+"October 19, 2022",Fee,Regulatory Operating fee,order: 2151630822,-€0.18
+"October 19, 2022",Fee,Transaction fee: Item,order: 2151630822,-€2.32
+"October 19, 2022",Fee,Processing fee,order: 2151630822,-€2.09
+"October 19, 2022",VAT,VAT: auto-renew sold ,auto-renew sold : 0000,-€0.04
+"October 19, 2022",VAT,VAT: multi-quantity,multi-quantity: 0000,-€0.04
+"October 19, 2022",Fee,Listing fee,listing: 0000,-€0.20
+"October 19, 2022",Fee,Listing fee,listing: 0000,-€0.20
+"October 14, 2022",Fee,Credit for Regulatory Operating fee,order: 2034551250,€0.02
+"October 14, 2022",Fee,Credit for transaction fee,order: 2034551250,€0.26
+"October 14, 2022",VAT,VAT: shipping transaction credit,,€0.05
+"October 14, 2022",Fee,Credit for Regulatory Operating fee,order: 0000,€0.02
+"October 14, 2022",Fee,Credit for transaction fee,order: 0000,€0.26
+"October 14, 2022",VAT,VAT: shipping transaction credit,,€0.05
+"October 14, 2022",VAT,VAT: Processing Fee,order: 2034551250,€0.04
+"October 14, 2022",Fee,Credit for processing fee,order: 2034551250,€0.16
+"October 14, 2022",VAT,VAT: Processing Fee,order: 0000,€0.04
+"October 14, 2022",Fee,Credit for processing fee,order: 0000,€0.17
+"October 14, 2022",Fee,Credit for Regulatory Operating fee,order: 2319817251,€0.02
+"October 14, 2022",Fee,Credit for transaction fee,order: 2319817251,€0.26
+"October 14, 2022",VAT,VAT: shipping transaction credit,,€0.05
+"October 14, 2022",VAT,VAT: Processing Fee,order: 2319817251,€0.04
+"October 14, 2022",Fee,Credit for processing fee,order: 2319817251,€0.16
+"October 14, 2022",Fee,Credit for Regulatory Operating fee,order: 2948002861,€0.02
+"October 14, 2022",VAT,VAT: shipping transaction credit,,€0.05
+"October 14, 2022",Fee,Credit for transaction fee,order: 2948002861,€0.26
+"October 14, 2022",Fee,Credit for processing fee,order: 2948002861,€0.17
+"October 14, 2022",VAT,VAT: Processing Fee,order: 2948002861,€0.04
+"October 14, 2022",Fee,Credit for Regulatory Operating fee,order: 2194007233,€0.02
+"October 14, 2022",Fee,Credit for transaction fee,order: 2194007233,€0.26
+"October 14, 2022",VAT,VAT: shipping transaction credit,,€0.05
+"October 14, 2022",VAT,VAT: Processing Fee,order: 2194007233,€0.04
+"October 14, 2022",Fee,Credit for processing fee,order: 2194007233,€0.18
+"October 14, 2022",VAT,VAT: transaction,transaction: 0000,-€0.21
+"October 14, 2022",VAT,VAT: Regulatory Operating fee,,-€0.02
+"October 14, 2022",VAT,VAT: shipping_transaction,,-€0.11
+"October 14, 2022",VAT,VAT: Processing Fee,order: 2034551250,-€0.26
+"October 14, 2022",Fee,Transaction fee: Item,order: 2034551250,-€1.04
+"October 14, 2022",Fee,Regulatory Operating fee,order: 2034551250,-€0.10
+"October 14, 2022",Fee,Transaction fee: Item,order: 2034551250,-€0.55
+"October 14, 2022",Fee,Processing fee,order: 2034551250,-€1.28
+"October 14, 2022",VAT,VAT: auto-renew sold ,auto-renew sold : 0000,-€0.04
+"October 14, 2022",Fee,Listing fee,listing: 0000,-€0.21
+"October 14, 2022",VAT,VAT: transaction,transaction: 0000,-€0.20
+"October 14, 2022",VAT,VAT: Regulatory Operating fee,,-€0.02
+"October 14, 2022",VAT,VAT: shipping_transaction,,-€0.11
+"October 14, 2022",VAT,VAT: Processing Fee,order: 0000,-€0.26
+"October 14, 2022",Fee,Transaction fee: Item,order: 0000,-€0.99
+"October 14, 2022",Fee,Processing fee,order: 0000,-€1.32
+"October 14, 2022",Fee,Regulatory Operating fee,order: 0000,-€0.09
+"October 14, 2022",Fee,Transaction fee: Item,order: 0000,-€0.55
+"October 14, 2022",VAT,VAT: auto-renew sold ,auto-renew sold : 0000,-€0.04
+"October 14, 2022",Fee,Listing fee,listing: 0000,-€0.20
+"October 12, 2022",VAT,VAT: shipping_transaction,,-€0.11
+"October 12, 2022",VAT,VAT: transaction,transaction: 0000,-€0.21
+"October 12, 2022",VAT,VAT: Regulatory Operating fee,,-€0.02
+"October 12, 2022",VAT,VAT: Processing Fee,order: 2319817251,-€0.26
+"October 12, 2022",Fee,Transaction fee: Item,order: 2319817251,-€0.55
+"October 12, 2022",Fee,Transaction fee: Item,order: 2319817251,-€1.04
+"October 12, 2022",Fee,Regulatory Operating fee,order: 2319817251,-€0.10
+"October 12, 2022",Fee,Processing fee,order: 2319817251,-€1.28
+"October 12, 2022",VAT,VAT: auto-renew sold ,auto-renew sold : 0000,-€0.04
+"October 12, 2022",Fee,Listing fee,listing: 0000,-€0.21
+"October 12, 2022",VAT,VAT: Regulatory Operating fee,,-€0.04
+"October 12, 2022",VAT,VAT: shipping_transaction,,-€0.16
+"October 12, 2022",VAT,VAT: transaction,transaction: 0000,-€0.42
+"October 12, 2022",VAT,VAT: Processing Fee,order: 2164881292,-€0.42
+"October 12, 2022",Fee,Transaction fee: Item,order: 2164881292,-€0.81
+"October 12, 2022",Fee,Processing fee,order: 2164881292,-€2.08
+"October 12, 2022",Fee,Regulatory Operating fee,order: 2164881292,-€0.18
+"October 12, 2022",Fee,Transaction fee: Item,order: 2164881292,-€2.08
+"October 12, 2022",VAT,VAT: auto-renew sold ,auto-renew sold : 0000,-€0.04
+"October 12, 2022",VAT,VAT: multi-quantity,multi-quantity: 0000,-€0.04
+"October 12, 2022",Fee,Listing fee,listing: 0000,-€0.21
+"October 12, 2022",Fee,Listing fee,listing: 0000,-€0.21
+"October 12, 2022",VAT,VAT: Regulatory Operating fee,,-€0.02
+"October 12, 2022",VAT,VAT: transaction,transaction: 0000,-€0.27
+"October 12, 2022",VAT,VAT: shipping_transaction,,-€0.11
+"October 12, 2022",VAT,VAT: Processing Fee,order: 2948002861,-€0.31
+"October 12, 2022",Fee,Regulatory Operating fee,order: 2948002861,-€0.12
+"October 12, 2022",Fee,Transaction fee: Item,order: 2948002861,-€0.55
+"October 12, 2022",Fee,Transaction fee: Item,order: 2948002861,-€1.37
+"October 12, 2022",Fee,Processing fee,order: 2948002861,-€1.57
+"October 12, 2022",VAT,VAT: auto-renew sold ,auto-renew sold : 0000,-€0.04
+"October 12, 2022",Fee,Listing fee,listing: 0000,-€0.21
+"October 12, 2022",VAT,VAT: Regulatory Operating fee,,-€0.02
+"October 12, 2022",VAT,VAT: transaction,transaction: 0000,-€0.27
+"October 12, 2022",VAT,VAT: shipping_transaction,,-€0.11
+"October 12, 2022",VAT,VAT: Processing Fee,order: 2194007233,-€0.32
+"October 12, 2022",Fee,Transaction fee: Item,order: 2194007233,-€1.37
+"October 12, 2022",Fee,Regulatory Operating fee,order: 2194007233,-€0.12
+"October 12, 2022",Fee,Transaction fee: Item,order: 2194007233,-€0.55
+"October 12, 2022",Fee,Processing fee,order: 2194007233,-€1.58
+"October 12, 2022",VAT,VAT: auto-renew sold ,auto-renew sold : 0000,-€0.04
+"October 12, 2022",Fee,Listing fee,listing: 0000,-€0.21
+"October 4, 2022",VAT,VAT: shipping_transaction,,-€0.11
+"October 4, 2022",VAT,VAT: transaction,transaction: 0000,-€0.40
+"October 4, 2022",VAT,VAT: Regulatory Operating fee,,-€0.03
+"October 4, 2022",VAT,VAT: Processing Fee,order: 2312910793,-€0.40
+"October 4, 2022",Fee,Transaction fee: Item,order: 2312910793,-€0.55
+"October 4, 2022",Fee,Transaction fee: Item,order: 2312910793,-€2.02
+"October 4, 2022",Fee,Regulatory Operating fee,order: 2312910793,-€0.16
+"October 4, 2022",Fee,Processing fee,order: 2312910793,-€1.99
+"October 4, 2022",VAT,VAT: auto-renew sold ,auto-renew sold : 0000,-€0.04
+"October 4, 2022",Fee,Listing fee,listing: 0000,-€0.20
+"October 1, 2022",VAT,VAT: Regulatory Operating fee,,-€0.03
+"October 1, 2022",VAT,VAT: shipping_transaction,,-€0.11
+"October 1, 2022",VAT,VAT: transaction,transaction: 0000,-€0.40
+"October 1, 2022",VAT,VAT: Processing Fee,order: 2870823848,-€0.38
+"October 1, 2022",Fee,Regulatory Operating fee,order: 2870823848,-€0.16
+"October 1, 2022",Fee,Transaction fee: Item,order: 2870823848,-€0.55
+"October 1, 2022",Fee,Transaction fee: Item,order: 2870823848,-€2.02
+"October 1, 2022",Fee,Processing fee,order: 2870823848,-€1.88
+"October 1, 2022",VAT,VAT: auto-renew sold ,auto-renew sold : 0000,-€0.04
+"October 1, 2022",Fee,Listing fee,listing: 0000,-€0.20
+"September 26, 2022",VAT,VAT: Regulatory Operating fee,,-€0.01
+"September 26, 2022",VAT,VAT: shipping_transaction,,-€0.05
+"September 26, 2022",VAT,VAT: transaction,transaction: 0000,-€0.08
+"September 26, 2022",VAT,VAT: Processing Fee,order: 2997709823,-€0.14
+"September 26, 2022",Fee,Regulatory Operating fee,order: 2997709823,-€0.04
+"September 26, 2022",Fee,Transaction fee: Item,order: 2997709823,-€0.23
+"September 26, 2022",Fee,Transaction fee: Item,order: 2997709823,-€0.42
+"September 26, 2022",Fee,Processing fee,order: 2997709823,-€0.70
+"September 26, 2022",VAT,VAT: auto-renew sold ,auto-renew sold : 0000,-€0.04
+"September 26, 2022",VAT,VAT: multi-quantity,multi-quantity: 0000,-€0.04
+"September 26, 2022",Fee,Listing fee,listing: 0000,-€0.21
+"September 26, 2022",Fee,Listing fee,listing: 0000,-€0.21
+"September 20, 2022",VAT,VAT: transaction,transaction: 0000,-€0.22
+"September 20, 2022",VAT,VAT: Regulatory Operating fee,,-€0.02
+"September 20, 2022",VAT,VAT: shipping_transaction,,-€0.05
+"September 20, 2022",VAT,VAT: Processing Fee,order: 2566363625,-€0.26
+"September 20, 2022",Fee,Regulatory Operating fee,order: 2566363625,-€0.08
+"September 20, 2022",Fee,Transaction fee: Item,order: 2566363625,-€0.23
+"September 20, 2022",Fee,Transaction fee: Item,order: 2566363625,-€1.11
+"September 20, 2022",Fee,Processing fee,order: 2566363625,-€1.28
+"September 20, 2022",VAT,VAT: auto-renew sold ,auto-renew sold : 0000,-€0.04
+"September 20, 2022",Fee,Listing fee,listing: 0000,-€0.20
+"September 16, 2022",VAT,VAT: shipping_transaction,,-€0.11
+"September 16, 2022",VAT,VAT: transaction,transaction: 0000,-€0.40
+"September 16, 2022",VAT,VAT: Regulatory Operating fee,,-€0.03
+"September 16, 2022",VAT,VAT: Processing Fee,order: 2396330091,-€0.38
+"September 16, 2022",Fee,Regulatory Operating fee,order: 2396330091,-€0.16
+"September 16, 2022",Fee,Transaction fee: Item,order: 2396330091,-€0.55
+"September 16, 2022",Fee,Transaction fee: Item,order: 2396330091,-€2.02
+"September 16, 2022",Fee,Processing fee,order: 2396330091,-€1.88
+"September 16, 2022",VAT,VAT: auto-renew sold ,auto-renew sold : 0000,-€0.04
+"September 16, 2022",Fee,Listing fee,listing: 0000,-€0.20
+"September 7, 2022",VAT,VAT: shipping_transaction,,-€0.05
+"September 7, 2022",VAT,VAT: Regulatory Operating fee,,-€0.02
+"September 7, 2022",VAT,VAT: transaction,transaction: 0000,-€0.22
+"September 7, 2022",VAT,VAT: Processing Fee,order: 2626280998,-€0.23
+"September 7, 2022",Fee,Transaction fee: Item,order: 2626280998,-€0.23
+"September 7, 2022",Fee,Regulatory Operating fee,order: 2626280998,-€0.08
+"September 7, 2022",Fee,Transaction fee: Item,order: 2626280998,-€1.11
+"September 7, 2022",Fee,Processing fee,order: 2626280998,-€1.16
+"September 7, 2022",VAT,VAT: auto-renew sold ,auto-renew sold : 0000,-€0.04
+"September 7, 2022",Fee,Listing fee,listing: 0000,-€0.20
+"September 3, 2022",VAT,VAT: Regulatory Operating fee,,-€0.01
+"September 3, 2022",VAT,VAT: shipping_transaction,,-€0.05
+"September 3, 2022",VAT,VAT: transaction,transaction: 0000,-€0.04
+"September 3, 2022",VAT,VAT: Processing Fee,order: 2051662445,-€0.11
+"September 3, 2022",Fee,Regulatory Operating fee,order: 2051662445,-€0.03
+"September 3, 2022",Fee,Transaction fee: Item,order: 2051662445,-€0.23
+"September 3, 2022",Fee,Transaction fee: Item,order: 2051662445,-€0.18
+"September 3, 2022",Fee,Processing fee,order: 2051662445,-€0.57
+"September 3, 2022",VAT,VAT: auto-renew sold ,auto-renew sold : 0000,-€0.04
+"September 3, 2022",Fee,Listing fee,listing: 0000,-€0.20
+"August 30, 2022",VAT,VAT: Regulatory Operating fee,,-€0.03
+"August 30, 2022",VAT,VAT: shipping_transaction,,-€0.11
+"August 30, 2022",VAT,VAT: transaction,transaction: 0000,-€0.31
+"August 30, 2022",VAT,VAT: Processing Fee,order: 2856518180,-€0.35
+"August 30, 2022",Fee,Processing fee,order: 2856518180,-€1.73
+"August 30, 2022",Fee,Regulatory Operating fee,order: 2856518180,-€0.13
+"August 30, 2022",Fee,Transaction fee: Item,order: 2856518180,-€0.55
+"August 30, 2022",Fee,Transaction fee: Item,order: 2856518180,-€1.56
+"August 30, 2022",VAT,VAT: auto-renew sold ,auto-renew sold : 0000,-€0.04
+"August 30, 2022",Fee,Listing fee,listing: 0000,-€0.20
+"August 30, 2022",VAT,VAT: Regulatory Operating fee,,-€0.02
+"August 30, 2022",VAT,VAT: shipping_transaction,,-€0.05
+"August 30, 2022",VAT,VAT: transaction,transaction: 0000,-€0.08
+"August 30, 2022",VAT,VAT: transaction,transaction: 0000,-€0.22
+"August 30, 2022",VAT,VAT: Processing Fee,order: 2625053885,-€0.30
+"August 30, 2022",Fee,Regulatory Operating fee,order: 2625053885,-€0.11
+"August 30, 2022",Fee,Transaction fee: Item,order: 2625053885,-€0.26
+"August 30, 2022",Fee,Transaction fee: Item,order: 2625053885,-€0.41
+"August 30, 2022",Fee,Processing fee,order: 2625053885,-€1.50
+"August 30, 2022",Fee,Transaction fee: Item,order: 2625053885,-€1.11
+"August 30, 2022",VAT,VAT: auto-renew sold ,auto-renew sold : 0000,-€0.04
+"August 30, 2022",VAT,VAT: auto-renew sold ,auto-renew sold : 0000,-€0.04
+"August 30, 2022",Fee,Listing fee,listing: 0000,-€0.20
+"August 30, 2022",Fee,Listing fee,listing: 0000,-€0.20
+"August 30, 2022",Fee,Credit for Regulatory Operating fee,order: 0000,€0.17
+"August 30, 2022",VAT,VAT: Credit for Regulatory Operating fee,,€0.03
+"August 30, 2022",Fee,Credit for transaction fee,order: 0000,€2.15
+"August 30, 2022",Fee,Credit for transaction fee,order: 0000,€0.55
+"August 30, 2022",VAT,VAT: transaction credit,transaction credit: 0000,€0.43
+"August 30, 2022",VAT,VAT: shipping transaction credit,,€0.11
+"August 30, 2022",VAT,VAT: Credit for Regulatory Operating fee,,€0.03
+"August 30, 2022",Fee,Credit for Regulatory Operating fee,order: 0000,€0.17
+"August 30, 2022",Fee,Credit for transaction fee,order: 0000,€2.15
+"August 30, 2022",Fee,Credit for transaction fee,order: 0000,€0.55
+"August 30, 2022",VAT,VAT: shipping transaction credit,,€0.11
+"August 30, 2022",VAT,VAT: transaction credit,transaction credit: 0000,€0.43
+"August 30, 2022",Fee,Credit for listing fee,listing: 0000,€0.19
+"August 30, 2022",VAT,VAT: Processing Fee,order: 0000,€0.41
+"August 30, 2022",Fee,Credit for processing fee,order: 0000,€2.07
+"August 30, 2022",VAT,VAT: listing credit,listing credit: 0000,€0.04
+"August 30, 2022",Fee,Credit for Regulatory Operating fee,order: 0000,€0.12
+"August 30, 2022",VAT,VAT: Credit for Regulatory Operating fee,,€0.02
+"August 30, 2022",Fee,Credit for transaction fee,order: 0000,€1.43
+"August 30, 2022",VAT,VAT: transaction credit,transaction credit: 0000,€0.29
+"August 30, 2022",VAT,VAT: shipping transaction credit,,€0.11
+"August 30, 2022",Fee,Credit for transaction fee,order: 0000,€0.55
+"August 30, 2022",Fee,Credit for listing fee,listing: 0000,€0.20
+"August 30, 2022",VAT,VAT: renew sold auto credit,renew sold auto credit: 0000,€0.04
+"August 30, 2022",VAT,VAT: Processing Fee,order: 0000,€0.41
+"August 30, 2022",Fee,Credit for processing fee,order: 0000,€2.03
+"August 30, 2022",Fee,Credit for listing fee,listing: 0000,€0.20
+"August 30, 2022",VAT,VAT: renew sold auto credit,renew sold auto credit: 0000,€0.04
+"August 30, 2022",Fee,Credit for processing fee,order: 0000,€1.52
+"August 30, 2022",VAT,VAT: Processing Fee,order: 0000,€0.30
+"August 30, 2022",VAT,VAT: renew expired,renew expired: 0000,-€0.04
+"August 30, 2022",Fee,Listing fee,listing: 0000,-€0.20
+"August 30, 2022",VAT,VAT: renew expired,renew expired: 0000,-€0.04
+"August 30, 2022",Fee,Listing fee,listing: 0000,-€0.20
+"August 20, 2022",VAT,VAT: Regulatory Operating fee,,-€0.01
+"August 20, 2022",VAT,VAT: shipping_transaction,,-€0.07
+"August 20, 2022",VAT,VAT: transaction,transaction: 0000,-€0.07
+"August 20, 2022",VAT,VAT: Processing Fee,order: 2337277782,-€0.14
+"August 20, 2022",Fee,Transaction fee: Item,order: 2337277782,-€0.33
+"August 20, 2022",Fee,Transaction fee: Item,order: 2337277782,-€0.36
+"August 20, 2022",Fee,Regulatory Operating fee,order: 2337277782,-€0.04
+"August 20, 2022",Fee,Processing fee,order: 2337277782,-€0.72
+"August 20, 2022",VAT,VAT: auto-renew sold ,auto-renew sold : 0000,-€0.04
+"August 20, 2022",VAT,VAT: multi-quantity,multi-quantity: 0000,-€0.04
+"August 20, 2022",Fee,Listing fee,listing: 0000,-€0.20
+"August 20, 2022",Fee,Listing fee,listing: 0000,-€0.20
+"July 23, 2022",VAT,VAT: Regulatory Operating fee,,-€0.01
+"July 23, 2022",VAT,VAT: shipping_transaction,,-€0.05
+"July 23, 2022",VAT,VAT: transaction,transaction: 0000,-€0.07
+"July 23, 2022",VAT,VAT: Processing Fee,order: 2643877486,-€0.14
+"July 23, 2022",Fee,Regulatory Operating fee,order: 2643877486,-€0.04
+"July 23, 2022",Fee,Transaction fee: Item,order: 2643877486,-€0.23
+"July 23, 2022",Fee,Processing fee,order: 2643877486,-€0.69
+"July 23, 2022",Fee,Transaction fee: Item,order: 2643877486,-€0.37
+"July 23, 2022",VAT,VAT: auto-renew sold ,auto-renew sold : 0000,-€0.04
+"July 23, 2022",Fee,Listing fee,listing: 0000,-€0.20
+"July 17, 2022",VAT,VAT: Regulatory Operating fee,,-€0.02
+"July 17, 2022",VAT,VAT: shipping_transaction,,-€0.11
+"July 17, 2022",VAT,VAT: transaction,transaction: 0000,-€0.29
+"July 17, 2022",VAT,VAT: Processing Fee,order: 2965116475,-€0.30
+"July 17, 2022",Fee,Regulatory Operating fee,order: 2965116475,-€0.12
+"July 17, 2022",Fee,Transaction fee: Item,order: 2965116475,-€0.55
+"July 17, 2022",Fee,Transaction fee: Item,order: 2965116475,-€1.43
+"July 17, 2022",Fee,Processing fee,order: 2965116475,-€1.52
+"July 17, 2022",VAT,VAT: auto-renew sold ,auto-renew sold : 0000,-€0.04
+"July 17, 2022",Fee,Listing fee,listing: 0000,-€0.20
+"July 17, 2022",VAT,VAT: Regulatory Operating fee,,-€0.03
+"July 17, 2022",VAT,VAT: transaction,transaction: 0000,-€0.46
+"July 17, 2022",VAT,VAT: shipping_transaction,,-€0.11
+"July 17, 2022",VAT,VAT: Processing Fee,order: 2659588214,-€0.41
+"July 17, 2022",Fee,Processing fee,order: 2659588214,-€2.04
+"July 17, 2022",Fee,Regulatory Operating fee,order: 2659588214,-€0.17
+"July 17, 2022",Fee,Transaction fee: Item,order: 2659588214,-€0.55
+"July 17, 2022",Fee,Transaction fee: Item,order: 2659588214,-€2.28
+"July 17, 2022",VAT,VAT: auto-renew sold ,auto-renew sold : 0000,-€0.04
+"July 17, 2022",Fee,Listing fee,listing: 0000,-€0.20
+"July 17, 2022",VAT,VAT: listing,listing: 0000,-€0.04
+"July 17, 2022",Fee,Listing fee,listing: 0000,-€0.20
+"July 4, 2022",VAT,VAT: Regulatory Operating fee,,-€0.02
+"July 4, 2022",VAT,VAT: transaction,transaction: 0000,-€0.26
+"July 4, 2022",VAT,VAT: Processing Fee,order: 2356083215,-€0.23
+"July 4, 2022",Fee,Processing fee,order: 2356083215,-€1.15
+"July 4, 2022",Fee,Regulatory Operating fee,order: 2356083215,-€0.08
+"July 4, 2022",Fee,Transaction fee: Item,order: 2356083215,-€1.30
+"July 4, 2022",VAT,VAT: auto-renew sold ,auto-renew sold : 0000,-€0.04
+"July 4, 2022",Fee,Listing fee,listing: 0000,-€0.19
+"June 25, 2022",VAT,VAT: transaction,transaction: 0000,-€0.24
+"June 25, 2022",VAT,VAT: Regulatory Operating fee,,-€0.02
+"June 25, 2022",VAT,VAT: shipping_transaction,,-€0.05
+"June 25, 2022",VAT,VAT: Processing Fee,order: 2100704682,-€0.24
+"June 25, 2022",Fee,Regulatory Operating fee,order: 2100704682,-€0.09
+"June 25, 2022",Fee,Transaction fee: Item,order: 2100704682,-€0.27
+"June 25, 2022",Fee,Transaction fee: Item,order: 2100704682,-€1.22
+"June 25, 2022",Fee,Processing fee,order: 2100704682,-€1.21
+"June 25, 2022",VAT,VAT: auto-renew sold ,auto-renew sold : 0000,-€0.04
+"June 25, 2022",Fee,Listing fee,listing: 0000,-€0.19
+"June 22, 2022",VAT,VAT: transaction,transaction: 0000,-€0.08
+"June 22, 2022",VAT,VAT: shipping_transaction,,-€0.05
+"June 22, 2022",VAT,VAT: Regulatory Operating fee,,-€0.01
+"June 22, 2022",VAT,VAT: Processing Fee,order: 2986125287,-€0.14
+"June 22, 2022",Fee,Regulatory Operating fee,order: 2986125287,-€0.04
+"June 22, 2022",Fee,Transaction fee: Item,order: 2986125287,-€0.41
+"June 22, 2022",Fee,Transaction fee: Item,order: 2986125287,-€0.23
+"June 22, 2022",Fee,Processing fee,order: 2986125287,-€0.72
+"June 22, 2022",VAT,VAT: auto-renew sold ,auto-renew sold : 0000,-€0.04
+"June 22, 2022",Fee,Listing fee,listing: 0000,-€0.19
+"June 19, 2022",VAT,VAT: Regulatory Operating fee,,-€0.02
+"June 19, 2022",VAT,VAT: shipping_transaction,,-€0.11
+"June 19, 2022",VAT,VAT: transaction,transaction: 0000,-€0.29
+"June 19, 2022",VAT,VAT: Processing Fee,order: 2882148606,-€0.32
+"June 19, 2022",Fee,Regulatory Operating fee,order: 2882148606,-€0.12
+"June 19, 2022",Fee,Transaction fee: Item,order: 2882148606,-€0.55
+"June 19, 2022",Fee,Transaction fee: Item,order: 2882148606,-€1.43
+"June 19, 2022",Fee,Processing fee,order: 2882148606,-€1.60
+"June 19, 2022",VAT,VAT: auto-renew sold ,auto-renew sold : 0000,-€0.04
+"June 19, 2022",Fee,Listing fee,listing: 0000,-€0.19
+"June 19, 2022",VAT,VAT: Regulatory Operating fee,,-€0.02
+"June 19, 2022",VAT,VAT: shipping_transaction,,-€0.11
+"June 19, 2022",VAT,VAT: transaction,transaction: 0000,-€0.29
+"June 19, 2022",VAT,VAT: Processing Fee,order: 0000,-€0.30
+"June 19, 2022",Fee,Transaction fee: Item,order: 0000,-€0.55
+"June 19, 2022",Fee,Transaction fee: Item,order: 0000,-€1.43
+"June 19, 2022",Fee,Processing fee,order: 0000,-€1.52
+"June 19, 2022",Fee,Regulatory Operating fee,order: 0000,-€0.12
+"June 19, 2022",VAT,VAT: auto-renew sold ,auto-renew sold : 0000,-€0.04
+"June 19, 2022",Fee,Listing fee,listing: 0000,-€0.19
+"June 14, 2022",VAT,VAT: Regulatory Operating fee,,-€0.02
+"June 14, 2022",VAT,VAT: shipping_transaction,,-€0.08
+"June 14, 2022",VAT,VAT: transaction,transaction: 0000,-€0.07
+"June 14, 2022",VAT,VAT: transaction,transaction: 0000,-€0.03
+"June 14, 2022",VAT,VAT: transaction,transaction: 0000,-€0.07
+"June 14, 2022",VAT,VAT: Processing Fee,order: 2672800506,-€0.23
+"June 14, 2022",Fee,Regulatory Operating fee,order: 2672800506,-€0.08
+"June 14, 2022",Fee,Transaction fee: Item,order: 2672800506,-€0.42
+"June 14, 2022",Fee,Transaction fee: Item,order: 2672800506,-€0.35
+"June 14, 2022",Fee,Transaction fee: Item,order: 2672800506,-€0.35
+"June 14, 2022",Fee,Transaction fee: Item,order: 2672800506,-€0.15
+"June 14, 2022",Fee,Processing fee,order: 2672800506,-€1.13
+"June 14, 2022",VAT,VAT: auto-renew sold ,auto-renew sold : 0000,-€0.04
+"June 14, 2022",VAT,VAT: auto-renew sold ,auto-renew sold : 0000,-€0.04
+"June 14, 2022",VAT,VAT: auto-renew sold ,auto-renew sold : 0000,-€0.04
+"June 14, 2022",Fee,Listing fee,listing: 0000,-€0.19
+"June 14, 2022",Fee,Listing fee,listing: 0000,-€0.19
+"June 14, 2022",Fee,Listing fee,listing: 0000,-€0.19
+"May 7, 2022",VAT,VAT: transaction,transaction: 0000,-€0.05
+"May 7, 2022",VAT,VAT: Regulatory Operating fee,,-€0.01
+"May 7, 2022",VAT,VAT: shipping_transaction,,-€0.05
+"May 7, 2022",VAT,VAT: Processing Fee,order: 2308820529,-€0.12
+"May 7, 2022",Fee,Regulatory Operating fee,order: 2308820529,-€0.03
+"May 7, 2022",Fee,Transaction fee: Item,order: 2308820529,-€0.23
+"May 7, 2022",Fee,Transaction fee: Item,order: 2308820529,-€0.24
+"May 7, 2022",Fee,Processing fee,order: 2308820529,-€0.61
+"May 7, 2022",VAT,VAT: auto-renew sold ,auto-renew sold : 0000,-€0.04
+"May 7, 2022",Fee,Listing fee,listing: 0000,-€0.19
+"May 1, 2022",VAT,VAT: shipping_transaction,,-€0.05
+"May 1, 2022",VAT,VAT: transaction,transaction: 0000,-€0.06
+"May 1, 2022",VAT,VAT: Regulatory Operating fee,,-€0.01
+"May 1, 2022",VAT,VAT: auto-renew sold ,auto-renew sold : 0000,-€0.04
+"May 1, 2022",VAT,VAT: Processing Fee,order: 2853141955,-€0.13
+"May 1, 2022",Fee,Regulatory Operating fee,order: 2853141955,-€0.03
+"May 1, 2022",Fee,Transaction fee: Item,order: 2853141955,-€0.23
+"May 1, 2022",Fee,Transaction fee: Item,order: 2853141955,-€0.31
+"May 1, 2022",Fee,Processing fee,order: 2853141955,-€0.64
+"May 1, 2022",Fee,Listing fee,listing: 0000,-€0.19
+"May 1, 2022",VAT,VAT: Regulatory Operating fee,,-€0.01
+"May 1, 2022",VAT,VAT: shipping_transaction,,-€0.04
+"May 1, 2022",VAT,VAT: transaction,transaction: 0000,-€0.05
+"May 1, 2022",VAT,VAT: Processing Fee,order: 2877854691,-€0.12
+"May 1, 2022",Fee,Processing fee,order: 2877854691,-€0.60
+"May 1, 2022",Fee,Regulatory Operating fee,order: 2877854691,-€0.03
+"May 1, 2022",Fee,Transaction fee: Item,order: 2877854691,-€0.22
+"May 1, 2022",Fee,Transaction fee: Item,order: 2877854691,-€0.24
+"May 1, 2022",VAT,VAT: auto-renew sold ,auto-renew sold : 0000,-€0.04
+"May 1, 2022",Fee,Listing fee,listing: 0000,-€0.19
+"May 1, 2022",VAT,VAT: shipping_transaction,,-€0.07
+"May 1, 2022",VAT,VAT: transaction,transaction: 0000,-€0.08
+"May 1, 2022",VAT,VAT: transaction,transaction: 0000,-€0.08
+"May 1, 2022",VAT,VAT: Regulatory Operating fee,,-€0.01
+"May 1, 2022",VAT,VAT: Processing Fee,order: 0000,-€0.21
+"May 1, 2022",Fee,Transaction fee: Item,order: 0000,-€0.41
+"May 1, 2022",Fee,Transaction fee: Item,order: 0000,-€0.41
+"May 1, 2022",Fee,Regulatory Operating fee,order: 0000,-€0.07
+"May 1, 2022",Fee,Transaction fee: Item,order: 0000,-€0.33
+"May 1, 2022",Fee,Processing fee,order: 0000,-€1.04
+"May 1, 2022",VAT,VAT: auto-renew sold ,auto-renew sold : 0000,-€0.04
+"May 1, 2022",VAT,VAT: auto-renew sold ,auto-renew sold : 0000,-€0.04
+"May 1, 2022",Fee,Listing fee,listing: 0000,-€0.19
+"May 1, 2022",Fee,Listing fee,listing: 0000,-€0.19
+"April 29, 2022",VAT,VAT: Regulatory Operating fee,,-€0.01
+"April 29, 2022",VAT,VAT: shipping_transaction,,-€0.04
+"April 29, 2022",VAT,VAT: transaction,transaction: 0000,-€0.05
+"April 29, 2022",VAT,VAT: Processing Fee,order: 2039955230,-€0.12
+"April 29, 2022",Fee,Processing fee,order: 2039955230,-€0.60
+"April 29, 2022",Fee,Regulatory Operating fee,order: 2039955230,-€0.03
+"April 29, 2022",Fee,Transaction fee: Item,order: 2039955230,-€0.22
+"April 29, 2022",Fee,Transaction fee: Item,order: 2039955230,-€0.25
+"April 29, 2022",VAT,VAT: auto-renew sold ,auto-renew sold : 0000,-€0.04
+"April 29, 2022",Fee,Listing fee,listing: 0000,-€0.19
+"April 25, 2022",VAT,VAT: Regulatory Operating fee,,-€0.01
+"April 25, 2022",VAT,VAT: transaction,transaction: 0000,-€0.04
+"April 25, 2022",VAT,VAT: shipping_transaction,,-€0.04
+"April 25, 2022",VAT,VAT: transaction,transaction: 0000,-€0.05
+"April 25, 2022",VAT,VAT: Processing Fee,order: 2636179367,-€0.15
+"April 25, 2022",Fee,Regulatory Operating fee,order: 2636179367,-€0.04
+"April 25, 2022",Fee,Transaction fee: Item,order: 2636179367,-€0.19
+"April 25, 2022",Fee,Processing fee,order: 2636179367,-€0.73
+"April 25, 2022",Fee,Transaction fee: Item,order: 2636179367,-€0.22
+"April 25, 2022",Fee,Transaction fee: Item,order: 2636179367,-€0.25
+"April 25, 2022",VAT,VAT: auto-renew sold ,auto-renew sold : 0000,-€0.04
+"April 25, 2022",VAT,VAT: auto-renew sold ,auto-renew sold : 0000,-€0.04
+"April 25, 2022",Fee,Listing fee,listing: 0000,-€0.19
+"April 25, 2022",Fee,Listing fee,listing: 0000,-€0.19
+"April 20, 2022",VAT,VAT: transaction,transaction: 0000,-€0.03
+"April 20, 2022",VAT,VAT: shipping_transaction,,-€0.04
+"April 20, 2022",VAT,VAT: Regulatory Operating fee,,-€0.01
+"April 20, 2022",VAT,VAT: transaction,transaction: 0000,-€0.02
+"April 20, 2022",VAT,VAT: Processing Fee,order: 2926353080,-€0.12
+"April 20, 2022",Fee,Transaction fee: Item,order: 2926353080,-€0.22
+"April 20, 2022",Fee,Regulatory Operating fee,order: 2926353080,-€0.03
+"April 20, 2022",Fee,Transaction fee: Item,order: 2926353080,-€0.13
+"April 20, 2022",Fee,Transaction fee: Item,order: 2926353080,-€0.11
+"April 20, 2022",Fee,Processing fee,order: 2926353080,-€0.61
+"April 20, 2022",VAT,VAT: auto-renew sold ,auto-renew sold : 0000,-€0.04
+"April 20, 2022",VAT,VAT: auto-renew sold ,auto-renew sold : 0000,-€0.04
+"April 20, 2022",Fee,Listing fee,listing: 0000,-€0.18
+"April 20, 2022",Fee,Listing fee,listing: 0000,-€0.18
+"April 7, 2022",VAT,VAT: Regulatory Operating fee,,-€0.01
+"April 7, 2022",VAT,VAT: shipping_transaction,,-€0.03
+"April 7, 2022",VAT,VAT: transaction,transaction: 0000,-€0.07
+"April 7, 2022",VAT,VAT: Processing Fee,order: 2498037882,-€0.15
+"April 7, 2022",Fee,Regulatory Operating fee,order: 2498037882,-€0.04
+"April 7, 2022",Fee,Transaction fee: Item,order: 2498037882,-€0.17
+"April 7, 2022",Fee,Transaction fee: Item,order: 2498037882,-€0.35
+"April 7, 2022",Fee,Processing fee,order: 2498037882,-€0.74
+"April 7, 2022",VAT,VAT: auto-renew sold ,auto-renew sold : 0000,-€0.04
+"April 7, 2022",VAT,VAT: multi-quantity,multi-quantity: 0000,-€0.04
+"April 7, 2022",Fee,Listing fee,listing: 0000,-€0.18
+"April 7, 2022",Fee,Listing fee,listing: 0000,-€0.18
+"April 7, 2022",Fee,Credit for Regulatory Operating fee,order: 0000,€0.01
+"April 7, 2022",Fee,Credit for transaction fee,order: 0000,€0.12
+"April 7, 2022",VAT,VAT: shipping transaction credit,,€0.03
+"April 7, 2022",VAT,VAT: Processing Fee,order: 0000,€0.04
+"April 7, 2022",Fee,Credit for processing fee,order: 0000,€0.10
+"April 7, 2022",VAT,VAT: listing,listing: 0000,-€0.04
+"April 7, 2022",Fee,Listing fee,listing: 0000,-€0.18
+"April 2, 2022",VAT,VAT: shipping_transaction,,-€0.04
+"April 2, 2022",VAT,VAT: Regulatory Operating fee,,-€0.01
+"April 2, 2022",VAT,VAT: transaction,transaction: 0000,-€0.05
+"April 2, 2022",VAT,VAT: Processing Fee,order: 2263967363,-€0.12
+"April 2, 2022",Fee,Regulatory Operating fee,order: 2263967363,-€0.03
+"April 2, 2022",Fee,Transaction fee: Item,order: 2263967363,-€0.18
+"April 2, 2022",Fee,Transaction fee: Item,order: 2263967363,-€0.23
+"April 2, 2022",Fee,Processing fee,order: 2263967363,-€0.62
+"April 2, 2022",VAT,VAT: auto-renew sold ,auto-renew sold : 0000,-€0.04
+"April 2, 2022",Fee,Listing fee,listing: 0000,-€0.18
+"March 24, 2022",VAT,VAT: Regulatory Operating fee,,-€0.01
+"March 24, 2022",VAT,VAT: transaction,transaction: 0000,-€0.04
+"March 24, 2022",VAT,VAT: transaction,transaction: 0000,-€0.04
+"March 24, 2022",VAT,VAT: shipping transaction,,-€0.03
+"March 24, 2022",VAT,VAT: Processing Fee,order: 2170054949,-€0.15
+"March 24, 2022",Fee,Transaction fee: Item,order: 2170054949,-€0.20
+"March 24, 2022",Fee,Transaction fee: Item,order: 2170054949,-€0.17
+"March 24, 2022",Fee,Transaction fee: Item,order: 2170054949,-€0.18
+"March 24, 2022",Fee,Regulatory Operating fee,order: 2170054949,-€0.04
+"March 24, 2022",Fee,Processing fee,order: 2170054949,-€0.76
+"March 24, 2022",VAT,VAT: auto-renew sold ,auto-renew sold : 0000,-€0.04
+"March 24, 2022",VAT,VAT: auto-renew sold ,auto-renew sold : 0000,-€0.04
+"March 24, 2022",Fee,Listing fee,listing: 0000,-€0.18
+"March 24, 2022",Fee,Listing fee,listing: 0000,-€0.18
+"March 24, 2022",VAT,VAT: Credit for Regulatory Operating fee,,€0.01
+"March 24, 2022",Fee,Credit for Regulatory Operating fee,order: 0000,€0.02
+"March 24, 2022",Fee,Credit for transaction fee,order: 0000,€0.23
+"March 24, 2022",VAT,VAT: shipping transaction credit,,€0.04
+"March 24, 2022",Fee,Credit for processing fee,order: 0000,€0.19
+"March 24, 2022",VAT,VAT: Processing Fee,order: 0000,€0.05
+"March 24, 2022",Fee,Credit for Regulatory Operating fee,order: 2443247206,€0.02
+"March 24, 2022",VAT,VAT: Credit for Regulatory Operating fee,,€0.01
+"March 24, 2022",Fee,Credit for transaction fee,order: 2443247206,€0.23
+"March 24, 2022",VAT,VAT: shipping transaction credit,,€0.04
+"March 24, 2022",VAT,VAT: Processing Fee,order: 2443247206,€0.05
+"March 24, 2022",Fee,Credit for processing fee,order: 2443247206,€0.20
+"March 24, 2022",VAT,VAT: renew expired,renew expired: 0000,-€0.04
+"March 24, 2022",Fee,Listing fee,listing: 0000,-€0.18
+"March 20, 2022",VAT,VAT: shipping transaction,,-€0.08
+"March 20, 2022",VAT,VAT: transaction,transaction: 0000,-€0.12
+"March 20, 2022",VAT,VAT: Regulatory Operating fee,,-€0.02
+"March 20, 2022",VAT,VAT: Processing Fee,order: 2443247206,-€0.23
+"March 20, 2022",Fee,Transaction fee: Item,order: 2443247206,-€0.41
+"March 20, 2022",Fee,Transaction fee: Item,order: 2443247206,-€0.60
+"March 20, 2022",Fee,Regulatory Operating fee,order: 2443247206,-€0.08
+"March 20, 2022",Fee,Processing fee,order: 2443247206,-€1.17
+"March 20, 2022",VAT,VAT: multi-quantity,multi-quantity: 0000,-€0.04
+"March 20, 2022",VAT,VAT: auto-renew sold ,auto-renew sold : 0000,-€0.04
+"March 20, 2022",Fee,Listing fee,listing: 0000,-€0.18
+"March 20, 2022",Fee,Listing fee,listing: 0000,-€0.18
+"March 13, 2022",VAT,VAT: shipping transaction,,-€0.03
+"March 13, 2022",VAT,VAT: Regulatory Operating fee,,-€0.01
+"March 13, 2022",VAT,VAT: transaction,transaction: 0000,-€0.06
+"March 13, 2022",VAT,VAT: Processing Fee,order: 2725298036,-€0.13
+"March 13, 2022",Fee,Transaction fee: Item,order: 2725298036,-€0.14
+"March 13, 2022",Fee,Regulatory Operating fee,order: 2725298036,-€0.04
+"March 13, 2022",Fee,Transaction fee: Item,order: 2725298036,-€0.32
+"March 13, 2022",Fee,Processing fee,order: 2725298036,-€0.67
+"March 13, 2022",VAT,VAT: auto-renew sold ,auto-renew sold : 0000,-€0.04
+"March 13, 2022",Fee,Listing fee,listing: 0000,-€0.18
+"March 13, 2022",VAT,VAT: transaction,transaction: 0000,-€0.02
+"March 13, 2022",VAT,VAT: transaction,transaction: 0000,-€0.02
+"March 13, 2022",VAT,VAT: transaction,transaction: 0000,-€0.02
+"March 13, 2022",VAT,VAT: shipping transaction,,-€0.03
+"March 13, 2022",VAT,VAT: Regulatory Operating fee,,-€0.01
+"March 13, 2022",VAT,VAT: Processing Fee,order: 2198907434,-€0.13
+"March 13, 2022",Fee,Processing fee,order: 2198907434,-€0.65
+"March 13, 2022",Fee,Regulatory Operating fee,order: 2198907434,-€0.03
+"March 13, 2022",Fee,Transaction fee: Item,order: 2198907434,-€0.10
+"March 13, 2022",Fee,Transaction fee: Item,order: 2198907434,-€0.08
+"March 13, 2022",Fee,Transaction fee: Item,order: 2198907434,-€0.08
+"March 13, 2022",Fee,Transaction fee: Item,order: 2198907434,-€0.17
+"March 13, 2022",VAT,VAT: auto-renew sold ,auto-renew sold : 0000,-€0.04
+"March 13, 2022",VAT,VAT: auto-renew sold ,auto-renew sold : 0000,-€0.04
+"March 13, 2022",VAT,VAT: auto-renew sold ,auto-renew sold : 0000,-€0.04
+"March 13, 2022",Fee,Listing fee,listing: 0000,-€0.18
+"March 13, 2022",Fee,Listing fee,listing: 0000,-€0.18
+"March 13, 2022",Fee,Listing fee,listing: 0000,-€0.18
+"March 13, 2022",VAT,VAT: Regulatory Operating fee,,-€0.01
+"March 13, 2022",VAT,VAT: shipping transaction,,-€0.04
+"March 13, 2022",VAT,VAT: transaction,transaction: 0000,-€0.04
+"March 13, 2022",VAT,VAT: transaction,transaction: 0000,-€0.05
+"March 13, 2022",VAT,VAT: Processing Fee,order: 2748636660,-€0.16
+"March 13, 2022",Fee,Regulatory Operating fee,order: 2748636660,-€0.05
+"March 13, 2022",Fee,Transaction fee: Item,order: 2748636660,-€0.20
+"March 13, 2022",Fee,Transaction fee: Item,order: 2748636660,-€0.18
+"March 13, 2022",Fee,Transaction fee: Item,order: 2748636660,-€0.27
+"March 13, 2022",Fee,Processing fee,order: 2748636660,-€0.82
+"March 13, 2022",VAT,VAT: auto-renew sold ,auto-renew sold : 0000,-€0.04
+"March 13, 2022",VAT,VAT: auto-renew sold ,auto-renew sold : 0000,-€0.04
+"March 13, 2022",Fee,Listing fee,listing: 0000,-€0.18
+"March 13, 2022",Fee,Listing fee,listing: 0000,-€0.18
+"February 8, 2022",VAT,VAT: Regulatory Operating fee,,-€0.01
+"February 8, 2022",VAT,VAT: transaction,transaction: 0000,-€0.09
+"February 8, 2022",VAT,VAT: shipping transaction,,-€0.06
+"February 8, 2022",VAT,VAT: Processing Fee,order: 2332396108,-€0.19
+"February 8, 2022",Fee,Transaction fee: Item,order: 2332396108,-€0.45
+"February 8, 2022",Fee,Processing fee,order: 2332396108,-€0.95
+"February 8, 2022",Fee,Transaction fee: Item,order: 2332396108,-€0.29
+"February 8, 2022",Fee,Regulatory Operating fee,order: 2332396108,-€0.06
+"February 8, 2022",VAT,VAT: auto-renew sold ,auto-renew sold : 0000,-€0.04
+"February 8, 2022",Fee,Listing fee,listing: 0000,-€0.18
+"February 8, 2022",VAT,VAT: transaction,transaction: 0000,-€0.16
+"February 8, 2022",VAT,VAT: transaction,transaction: 0000,-€0.08
+"February 8, 2022",VAT,VAT: Regulatory Operating fee,,-€0.02
+"February 8, 2022",VAT,VAT: shipping transaction,,-€0.06
+"February 8, 2022",VAT,VAT: Processing Fee,order: 2934252130,-€0.31
+"February 8, 2022",Fee,Transaction fee: Item,order: 2934252130,-€0.40
+"February 8, 2022",Fee,Transaction fee: Item,order: 2934252130,-€0.80
+"February 8, 2022",Fee,Regulatory Operating fee,order: 2934252130,-€0.12
+"February 8, 2022",Fee,Transaction fee: Item,order: 2934252130,-€0.29
+"February 8, 2022",Fee,Processing fee,order: 2934252130,-€1.55
+"February 8, 2022",VAT,VAT: multi-quantity,multi-quantity: 0000,-€0.04
+"February 8, 2022",VAT,VAT: auto-renew sold ,auto-renew sold : 0000,-€0.04
+"February 8, 2022",VAT,VAT: auto-renew sold ,auto-renew sold : 0000,-€0.04
+"February 8, 2022",Fee,Listing fee,listing: 0000,-€0.18
+"February 8, 2022",Fee,Listing fee,listing: 0000,-€0.18
+"February 8, 2022",Fee,Listing fee,listing: 0000,-€0.18
+"February 1, 2022",VAT,VAT: Regulatory Operating fee,,-€0.03
+"February 1, 2022",VAT,VAT: transaction,transaction: 0000,-€0.34
+"February 1, 2022",VAT,VAT: Processing Fee,order: 2700643248,-€0.33
+"February 1, 2022",Fee,Regulatory Operating fee,order: 2700643248,-€0.14
+"February 1, 2022",Fee,Transaction fee: Item,order: 2700643248,-€1.69
+"February 1, 2022",Fee,Processing fee,order: 2700643248,-€1.65
+"January 23, 2022",VAT,VAT: listing,listing: 0000,-€0.04
+"January 23, 2022",Fee,Listing fee,listing: 0000,-€0.18
+"January 23, 2022",VAT,VAT: listing,listing: 0000,-€0.04
+"January 23, 2022",Fee,Listing fee,listing: 0000,-€0.18
+"January 23, 2022",VAT,VAT: transaction,transaction: 0000,-€0.45
+"January 23, 2022",VAT,VAT: Regulatory Operating fee,,-€0.04
+"January 23, 2022",VAT,VAT: Processing Fee,order: 2050447539,-€0.45
+"January 23, 2022",Fee,Regulatory Operating fee,order: 2050447539,-€0.18
+"January 23, 2022",Fee,Transaction fee: Item,order: 2050447539,-€2.25
+"January 23, 2022",Fee,Processing fee,order: 2050447539,-€2.26
+"January 23, 2022",VAT,VAT: listing,listing: 0000,-€0.04
+"January 23, 2022",Fee,Listing fee,listing: 0000,-€0.18

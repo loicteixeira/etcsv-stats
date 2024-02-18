@@ -37,8 +37,12 @@ function parseCSV(fileContent: string | ArrayBuffer, recordSchema: ZodType) {
 	return { errors, records };
 }
 
-export async function readCSV(fileHandle: File, recordSchema: ZodType) {
+export async function readCSVFile(fileHandle: File, recordSchema: ZodType) {
 	const fileContent = await readFileContent(fileHandle); // TODO: Handle error
 	const { errors, records } = parseCSV(fileContent, recordSchema);
 	return { errors, records };
+}
+
+export async function readCSVContent(fileContent: string | ArrayBuffer, recordSchema: ZodType) {
+	return parseCSV(fileContent, recordSchema);
 }
