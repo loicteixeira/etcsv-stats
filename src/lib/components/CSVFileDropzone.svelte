@@ -5,6 +5,7 @@
 	import type { ZodType } from 'zod';
 	import Icon from '@iconify/svelte';
 	import fileDescription from '@iconify/icons-tabler/file-description';
+	import trashX from '@iconify/icons-tabler/trash-x';
 	import { readCSV } from '$lib/files';
 	import { nGetText } from '$lib/translations';
 
@@ -26,6 +27,10 @@
 			};
 			$files = [...$files, fileInfo].sort((a, b) => a.filename.localeCompare(b.filename));
 		});
+	}
+
+	async function onRemoveFile(filename: string) {
+		$files = $files.filter((file) => file.filename != filename);
 	}
 </script>
 
@@ -63,8 +68,23 @@
 							{nGetText(errors.length, 'error', 'errors')}
 						</span>
 					{/if}
+					<button class="delete-action" title="Remove file" on:click={() => onRemoveFile(filename)}>
+						<Icon icon={trashX} />
+					</button>
 				</li>
 			{/each}
 		</ul>
 	{/if}
 </div>
+
+<style>
+	.delete-action {
+		padding: 0.25rem;
+	}
+
+	.delete-action:hover {
+		color: black;
+		background-color: white;
+		border-radius: var(--theme-rounded-base);
+	}
+</style>
