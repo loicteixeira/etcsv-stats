@@ -7,10 +7,25 @@ import { postProcessStatementCsvLine } from './entities/statement/transforms';
 import { computeOrderDetails, postProcessOrderCsvLine } from './entities/order/transforms';
 import { getCustomers } from './entities/customer/transforms';
 
+function fileStore<T>() {
+	const store = writable<TFileInfo<T>[]>([]);
+
+	return {
+		...store,
+		addFile: (newFileInfo: TFileInfo<T>) =>
+			store.update(
+				(value) => [...value, newFileInfo].sort((a, b) => a.filename.localeCompare(b.filename)), // TODO: Bail or update if duplicated name?
+			),
+		removeFile: (filename: string) =>
+			store.update((value) => value.filter((file) => file.filename != filename)),
+	};
+}
+export type FileStoreType = ReturnType<typeof fileStore<any>>;
+
 // Base: CSV files
-export const orderItemCSVs = writable<TFileInfo<TOrderItemCsvLine>[]>([]);
-export const orderCSVs = writable<TFileInfo<TOrderCsvLine>[]>([]);
-export const statementCSVs = writable<TFileInfo<TStatementCsvLine>[]>([]);
+export const orderItemCSVs = fileStore<TOrderItemCsvLine>();
+export const orderCSVs = fileStore<TOrderCsvLine>();
+export const statementCSVs = fileStore<TStatementCsvLine>();
 
 // Derived: CSV lines
 export const orderItemCSVLines = derived(orderItemCSVs, ($orderItemCSVs) =>

@@ -1,12 +1,10 @@
-import type { Writable } from 'svelte/store';
 import type { ZodType } from 'zod';
 
-import type { TFileInfo } from '$lib/entities/file/model';
 import { orderCsvLineSchema } from '$lib/entities/order/model';
 import { orderItemCsvLineSchema } from '$lib/entities/orderItem/model';
 import { statementCsvLineSchema } from '$lib/entities/statement/model';
 import { readCSVContent } from '$lib/files';
-import { orderCSVs, orderItemCSVs, statementCSVs } from '$lib/stores';
+import { type FileStoreType, orderCSVs, orderItemCSVs, statementCSVs } from '$lib/stores';
 
 import demoOrdersCSV from './demo-orders.csv?raw';
 import demoOrderItemsCSV from './demo-order-items.csv?raw';
@@ -37,17 +35,14 @@ async function loadFile(args: {
 	filename: string;
 	data: string;
 	validationSchema: ZodType;
-	store: Writable<TFileInfo<any>[]>;
+	store: FileStoreType;
 }) {
 	const { filename, data, validationSchema, store } = args;
 	const { errors, records } = await readCSVContent(data, validationSchema);
-	const ordersDemoFileHandle = {
+	store.addFile({
 		fileHandle: null,
 		filename: filename,
 		records: records,
 		errors: errors,
-	};
-	store.update((value) =>
-		[...value, ordersDemoFileHandle].sort((a, b) => a.filename.localeCompare(b.filename)),
-	);
+	});
 }

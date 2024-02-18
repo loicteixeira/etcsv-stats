@@ -1,16 +1,15 @@
 <script lang="ts">
-	import type { TFileInfo } from '$lib/entities/file/model';
 	import { FileDropzone } from '@skeletonlabs/skeleton';
-	import type { Writable } from 'svelte/store';
 	import type { ZodType } from 'zod';
 	import Icon from '@iconify/svelte';
 	import fileDescription from '@iconify/icons-tabler/file-description';
 	import trashX from '@iconify/icons-tabler/trash-x';
 	import { readCSVFile } from '$lib/files';
 	import { nGetText } from '$lib/translations';
+	import type { FileStoreType } from '$lib/stores';
 
 	export let name: string;
-	export let files: Writable<TFileInfo<any>[]>;
+	export let files: FileStoreType;
 	export let recordSchema: ZodType;
 
 	async function onChangeHandler(e: Event) {
@@ -19,18 +18,17 @@
 
 		Array.from(target.files).forEach(async (fileHandle) => {
 			const { errors, records } = await readCSVFile(fileHandle, recordSchema);
-			const fileInfo = {
+			files.addFile({
 				fileHandle: fileHandle,
-				filename: fileHandle.name, // TODO: Bail or update if duplicated name?
+				filename: fileHandle.name,
 				records: records,
 				errors: errors,
-			};
-			$files = [...$files, fileInfo].sort((a, b) => a.filename.localeCompare(b.filename));
+			});
 		});
 	}
 
 	async function onRemoveFile(filename: string) {
-		$files = $files.filter((file) => file.filename != filename);
+		files.removeFile(filename);
 	}
 </script>
 
