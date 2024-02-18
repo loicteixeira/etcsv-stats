@@ -13,7 +13,6 @@ export const orderItemCsvLineSchema = z
 		Quantity: z.coerce.number().int().nonnegative(),
 		'Shipping Discount': z.coerce.number().nonnegative().optional().default(0),
 		SKU: z.string(),
-		'Transaction ID': z.coerce.number(),
 		Variations: z.string(),
 	})
 	.transform((line) => {
@@ -52,7 +51,6 @@ export const orderItemCsvLineSchema = z
 			quantity: line['Quantity'],
 			shippingDiscount: line['Shipping Discount'],
 			sku: line['SKU'],
-			transactionID: line['Transaction ID'],
 			variations: variations,
 			variationsKey,
 		};
@@ -65,7 +63,6 @@ export type TOrderItem = {
 	listingID: number;
 	orderID: number;
 	sku: string;
-	transactionID: number;
 	variations: Record<string, string>;
 	variationsKey: string;
 	computedTotals: {

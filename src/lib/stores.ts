@@ -44,8 +44,7 @@ export const orderItems = derived([orderItemCSVLines, orders], ([$orderItemCSVLi
 		const order = ordersById[orderItem.orderID] as TOrder | undefined;
 		const orderTotals = order?.computedTotals;
 
-		const { itemName, listingID, orderID, sku, transactionID, variations, variationsKey } =
-			orderItem;
+		const { itemName, listingID, orderID, sku, variations, variationsKey } = orderItem;
 
 		const { quantity, unitPrice } = orderItem;
 		const totalGrossBeforeDiscounts = orderItem.quantity * orderItem.unitPrice; // Composite list price
@@ -76,7 +75,6 @@ export const orderItems = derived([orderItemCSVLines, orders], ([$orderItemCSVLi
 			listingID,
 			orderID,
 			sku,
-			transactionID,
 			variations,
 			variationsKey,
 			computedTotals: {
