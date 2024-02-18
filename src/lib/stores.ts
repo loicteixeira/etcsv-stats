@@ -13,9 +13,17 @@ function fileStore<T>() {
 	return {
 		...store,
 		addFile: (newFileInfo: TFileInfo<T>) =>
-			store.update(
-				(value) => [...value, newFileInfo].sort((a, b) => a.filename.localeCompare(b.filename)), // TODO: Bail or update if duplicated name?
-			),
+			store.update((value) => {
+				const existingFilenames = value.map((fileInfo) => fileInfo.filename);
+				if (existingFilenames.includes(newFileInfo.filename)) {
+					const conflictingFilenames = existingFilenames.filter((filename) =>
+						filename.startsWith(newFileInfo.filename),
+					);
+					const counter = conflictingFilenames.length + 1;
+					newFileInfo.filename = `${newFileInfo.filename}_${counter}`;
+				}
+				return [...value, newFileInfo].sort((a, b) => a.filename.localeCompare(b.filename));
+			}),
 		removeFile: (filename: string) =>
 			store.update((value) => value.filter((file) => file.filename != filename)),
 	};
