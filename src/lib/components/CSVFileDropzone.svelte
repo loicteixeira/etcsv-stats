@@ -66,23 +66,17 @@
 							{nGetText(errors.length, 'error', 'errors')}
 						</span>
 					{/if}
-					<button class="delete-action" title="Remove file" on:click={() => onRemoveFile(filename)}>
+					<button
+						class="group flex flex-nowrap items-center gap-1 rounded-xl px-2 hover:text-error-900 hover:bg-error-100"
+						on:click={() => onRemoveFile(filename)}
+					>
 						<Icon icon={trashX} />
+						<span class="text-base text-elipsis overflow-hidden sr-only group-hover:not-sr-only"
+							>Remove&nbsp;file</span
+						>
 					</button>
 				</li>
 			{/each}
 		</ul>
 	{/if}
 </div>
-
-<style>
-	.delete-action {
-		padding: 0.25rem;
-	}
-
-	.delete-action:hover {
-		color: black;
-		background-color: white;
-		border-radius: var(--theme-rounded-base);
-	}
-</style>
