@@ -3,7 +3,6 @@
 	import alert16 from '@iconify/icons-tabler/alert-circle';
 	import { loadDemoData } from '$lib/demo/load';
 	import { getToastStore, type ToastSettings } from '@skeletonlabs/skeleton';
-	import { goto } from '$app/navigation';
 
 	const toastStore = getToastStore();
 
@@ -13,12 +12,6 @@
 		const toast: ToastSettings = {
 			message: 'Demo data successfully loaded',
 			background: 'variant-filled-success',
-			action: {
-				label: 'See the demo products',
-				response: () => {
-					goto('/products');
-				},
-			},
 		};
 		toastStore.trigger(toast);
 	}
